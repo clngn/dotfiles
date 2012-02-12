@@ -1,0 +1,7 @@
+#!/bin/bash
+export PATH=/usr/texbin:$PATH
+export name=$1
+platex $1
+platex $1
+dvipdfmx ${name%.*}
+

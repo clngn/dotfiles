@@ -1,0 +1,8 @@
+OVERRIDE YES
+
+SGMLDECL "xhtml1.dcl"
+
+-- XHTML 1.0  ....................................... --
+
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "xhtml1-transitional.dtd"
+

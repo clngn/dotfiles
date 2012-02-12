@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="W3C-REC.css" type="text/css"?><?xml-stylesheet href="W3C-REC.css"
+type="text/css" ?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML+RDFa 1.0//EN' 'http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd'>
+<html xml:lang="en" dir="ltr" about="" property="dc:language" content="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:dc='http://purl.org/dc/terms/' xmlns:bibo='http://purl.org/ontology/bibo/'
+xmlns:foaf='http://xmlns.com/foaf/0.1/' xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>XHTML 1.1 - Conformance Definition</title>
+<link rel="prev" type="text/html" href="introduction.html" />
+<link rel="next" type="text/html" href="doctype.html" />
+<link rel="stylesheet" type="text/css" media="screen" href="xhtml.css" />
+<link rel="stylesheet" type="text/css" href="W3C-REC.css" />
+</head>
+<body>
+<div class="navbar">[<a href="introduction.html">previous</a>] &#160; [<a href="doctype.html">next</a>] &#160; [<a href="Overview.html#toc">table of contents</a>] 
+
+<hr />
+</div>
+
+<h1 id="s_conform" typeof="bibo:Chapter" about="#s_conform">2. Conformance Definition</h1>
+
+<div class='subtoc'>
+<p><strong>Contents</strong></p>
+
+<ul class='toc'>
+<li class='tocline'>2.1. <a href="#docconf" class="tocxref">Document Conformance</a> 
+
+<ul class="toc">
+<li class='tocline'>2.1.1. <a href="#strict" class="tocxref">Strictly Conforming Documents</a></li>
+</ul>
+</li>
+
+<li class='tocline'>2.2. <a href="#uaconf" class="tocxref">User Agent Conformance</a></li>
+</ul>
+</div>
+
+<p>This section is <em>normative</em>.</p>
+
+<p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in <a href= 
+"references.html#ref_RFC2119">[RFC2119]</a>.</p>
+
+<h2 id="docconf" typeof="bibo:Chapter" about="#docconf">2.1. Document Conformance</h2>
+
+<p>This version of XHTML provides a definition of strictly conforming XHTML documents, which are restricted to elements and attributes from the XHTML namespace.</p>
+
+<h3 id="strict" typeof="bibo:Chapter" about="#strict">2.1.1. Strictly Conforming Documents</h3>
+
+<p>A strictly conforming XHTML 1.1 document is a document that requires only the facilities described as mandatory in this specification. Such a document MUST meet all the following criteria:</p>
+
+<ol>
+<li>
+<p><span class="must">The document MUST conform to the constraints expressed in the schemas in <a href="xhtml11_schema.html#a_xhtml11_schema">Appendix&#160;D - XHTML 1.1 Schema</a> and <a href= 
+"xhtml11_dtd.html#a_xhtml11_dtd">Appendix&#160;C - XHTML 1.1 Document Type Definition</a>.</span></p>
+</li>
+
+<li>
+<p><span class="must">The local part of the root element of the document MUST be <code>html</code>.</span></p>
+</li>
+
+<li>
+<p><span class="must">The start tag of the root element of the document MUST explicitly contain an <code>xmlns</code> declaration for the XHTML namespace [<a class="nref" href= 
+"references.html#ref_XMLNAMES">XMLNAMES</a>]. The namespace URI for XHTML is defined to be <code>http://www.w3.org/1999/xhtml</code>.</span></p>
+
+<p><span class="may">The start tag MAY also contain the declaration of the XML Schema Instance Namespace and an XML Schema Instance <code>schemaLocation</code> attribute [<a class="nref" href= 
+"references.html#ref_XMLSCHEMA">XMLSCHEMA</a>]. Such an attribute would associate the XHTML namespace <code>http://www.w3.org/1999/xhtml</code> with the XML Schema at the URI <code>
+http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd</code>.</span></p>
+
+<div class="example">
+<p>Sample root element</p>
+
+<pre>
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                          http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
+&gt;
+</pre>
+</div>
+</li>
+
+<li><span class="must">There MUST be a DOCTYPE declaration in the document prior to the root element.</span> <span class="must">If present, the PUBLIC identifier included in the DOCTYPE declaration
+MUST reference the DTD found in <a href="xhtml11_dtd.html#a_xhtml11_dtd">Appendix A</a> using its Formal Public Identifier.</span> <span class="may">The SYSTEM identifier MAY be modified as
+appropriate.</span> 
+
+<pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+</pre>
+</li>
+
+<li><span class="may">The start tag MAY also contain a <code>version</code> attribute that declares the version of XHTML in use. The version of this version of XHTML is <code>-//W3C//DTD XHTML
+1.1//EN</code>.</span></li>
+</ol>
+
+<div class="example">
+<p>Example of an XHTML 1.1 document</p>
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html version="-//W3C//DTD XHTML 1.1//EN"
+      xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                          http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
+&gt;
+  &lt;head&gt;
+    &lt;title&gt;Virtual Library&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Moved to &lt;a href="http://example.org/"&gt;example.org&lt;/a&gt;.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>Note that in this example, the XML declaration is included. An XML declaration like the one above is not required in all XML documents. <span class="should">XHTML document authors SHOULD use XML
+declarations in all their documents.</span> <span class="must">XHTML document authors MUST use an XML declaration when the character encoding of the document is other than the default UTF-8 or UTF-16
+and no encoding is specified by a higher-level protocol.</span></p>
+
+<p><span class="should">XHTML 1.1 documents SHOULD be labeled with the Internet Media Type "application/xhtml+xml" as defined in [<a class="nref" href=
+"references.html#ref_RFC3236">RFC3236</a>]</span>. For further information on using media types with XHTML, see the informative note [<a class="nref" href=
+"references.html#ref_XHTMLMIME">XHTMLMIME</a>].</p>
+
+<h2 id="uaconf" typeof="bibo:Chapter" about="#uaconf">2.2. User Agent Conformance</h2>
+
+<p><span class="must">A conforming user agent MUST meet all user agent conformance requirements defined in [<a href="references.html#ref_xhtml_modularization">XHTMLMOD</a>].</span></p>
+
+<hr />
+<div class="navbar">[<a href="introduction.html">previous</a>] &#160; [<a href="doctype.html">next</a>] &#160; [<a href="Overview.html#toc">table of contents</a>]</div>
+</body>
+</html>
+
