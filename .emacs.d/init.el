@@ -64,14 +64,14 @@
 (setq comment-style 'multi-line)
 
 ;; C-hでバックスペース
-(global-set-key "\C-h" 'delete-backward-char)
+(global-set-key (kbd "C-h") 'delete-backward-char)
 
 ;; C-tでウインドウ移動
-(global-set-key "\C-t" 'next-multiframe-window)
+(global-set-key (kbd "C-t") 'next-multiframe-window)
 
 ;; 改行でオートインデント
-;(global-set-key "\C-m" 'newline-and-indent)
-;(global-set-key "\C-j" 'newline)
+;(global-set-key (kbd "C-m") 'newline-and-indent)
+;(global-set-key (kbd "C-j") 'newline)
 
 ;; タイトルバーに今開いてるファイル名を表示
 (setq frame-title-format "%f - emacs")
@@ -185,16 +185,21 @@
 
 ;; elscreen
 (require 'elscreen)
-(global-set-key "\M-t" 'elscreen-create)  ; 新規タブ
-(global-set-key "\M-T" 'elscreen-clone)   ; 新規タブでカレントバッファ引継ぎ
-(global-set-key [C-tab] 'elscreen-next)        ; タブ移動
-(global-set-key [C-S-tab] 'elscreen-previous)  ; タブ移動
+(global-set-key (kbd "M-t") 'elscreen-create)  ; 新規タブ
+(global-set-key (kbd "M-T") 'elscreen-clone)   ; 新規タブでカレントバッファ引継ぎ
+(global-set-key (kbd "C-<tab>") 'elscreen-next)        ; タブ移動
+(global-set-key (kbd "C-S-<tab>") 'elscreen-previous)  ; タブ移動
 
 ;; auto-complete
 (setq load-path (cons "~/.emacs.d/elisp/auto-complete/" load-path))
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/auto-complete/dict")
+(global-auto-complete-mode t)
 (ac-config-default)
+(setq ac-dwim t)
+(setq ac-auto-start 3)
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
 
 ;; auto-install
 (setq load-path (cons "~/.emacs.d/auto-install/" load-path))
@@ -222,6 +227,19 @@
 
 ;; anything
 (require 'anything-startup)
+
+;; org-remember
+(setq org-startup-truncated nil)
+(setq org-return-follows-link t)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(org-remember-insinuate)
+(setq org-directory "~/memo/")
+(setq org-default-notes-file (concat org-directory "agenda.org"))
+(setq org-remember-templates
+      '(("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")
+        ("Bug" ?b "** TODO %?   :bug:\n   %i\n   %a\n   %t" nil "Inbox")
+        ("Idea" ?i "** %?\n   %i\n   %a\n   %t" nil "New Ideas")
+        ))
 
 ;; twittering-mode
 (setq load-path (cons "~/.emacs.d/elisp/twittering-mode-2.0.0/" load-path))
@@ -366,62 +384,3 @@
              ))
 (setq tex-command "~/.emacs.d/platex2pdf") ; スクリプトを使って直接pdfにコンパイル
 (setq dvi2-command "open -a Preview.app")  ; プレビュー.appでpdfを開く
-
-;; jaspace
-;; (require 'jaspace)
-;; (setq jaspace-modes (append jaspace-modes
-;;                             (list 'yaml-mode
-;;                                   'perl-mode
-;;                                   'js2-mode
-;;                                   'javascript-mode
-;;                                   'python-mode
-;;                                   'ruby-mode
-;;                                   'php-mode
-;;                                   'xml-mode
-;;                                   'sgml-mode
-;;                                   'html-mode
-;;                                   'html-helper-mode
-;;                                   'css-mode
-;;                                   'text-mode
-;;                                   'tt-mode
-;;                                   'fundamental-mode)))
-;; (when (boundp 'jaspace-alternate-jaspace-string)
-;;   (setq jaspace-alternate-jaspace-string "□"))
-;; (when (boundp 'jaspace-highlight-tabs)
-;;   (setq jaspace-highlight-tabs ?^))
-;; (add-hook 'jaspace-mode-off-hook
-;;           (lambda()
-;;             (when (boundp 'show-trailing-whitespace)
-;;               (setq show-trailing-whitespace nil))))
-;; (add-hook 'jaspace-mode-hook
-;;           (lambda()
-;;             (progn
-;;               (when (boundp 'show-trailing-whitespace)
-;;                 (setq show-trailing-whitespace t))
-;;               (face-spec-set 'jaspace-highlight-jaspace-face
-;;                              '((((class color) (background light))
-;;                                 (:foreground "blue"))
-;;                                ;;(t (:foreground "green"))))
-;;                                (t (:foreground "gray32"))))
-;;               (face-spec-set 'jaspace-highlight-tab-face
-;;                              '((((class color) (background light))
-;;                                 (:foreground "red"
-;;                                              :background "unspecified"
-;;                                              :strike-through nil
-;;                                              :underline t))
-;;                                ;;(t (:foreground "purple"
-;;                                (t (:foreground "gray16"
-;;                                                :background "unspecified"
-;;                                                :strike-through nil
-;;                                                :underline t))))
-;;               (face-spec-set 'trailing-whitespace
-;;                              '((((class color) (background light))
-;;                                 (:foreground "red"
-;;                                              :background "unspecified"
-;;                                              :strike-through nil
-;;                                              :underline t))
-;;                                ;;(t (:foreground "purple"
-;;                                (t (:foreground "gray16"
-;;                                                :background "unspecified"
-;;                                                :strike-through nil
-;;                                                :underline t)))))))
