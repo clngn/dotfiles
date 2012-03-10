@@ -1,4 +1,10 @@
-# .emacs.d以下
+# Mac
+.DS_Store
+
+# Python
+*.pyc
+
+#Emacs
 .emacs.d/auto-save-list/
 .emacs.d/ac-comphist.dat
 
