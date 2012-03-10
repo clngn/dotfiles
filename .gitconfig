@@ -1,5 +1,7 @@
 [core]
     editor = vim
+    excludesfile = ./gitignore
+
 [color]
     ui = auto
     diff = auto
