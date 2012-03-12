@@ -166,7 +166,7 @@
  '(elscreen-tab-current-screen-face
    ((t (:background "gray75" :foreground "black"))))
  '(elscreen-tab-other-screen-face
-    ((t (:background "gray30" :foreground "gray80"))))
+   ((t (:background "gray30" :foreground "gray80"))))
  '(whitespace-tab
    ((t (:background nil :foreground "gray32" :underline t))))
  '(whitespace-space

@@ -1,0 +1,23 @@
+# color
+export CLICOLOR=1
+export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+# alias
+alias o='open .'
+alias safari='open -a Safari'
+alias chrome='open -a Google\ Chrome'
+alias emacs='open -a Emacs'
+alias emacsnw='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias cot='open -a CotEditor'
+
+# Android SDK
+export PATH=$PATH:~/work/android-sdk-mac_x86/tools
+
+# virtualenv
+export WORKON_HOME=$HOME/work/.virtualenvs
+source `which virtualenvwrapper.sh`
+
+# python
+#alias python='python2.7'
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+
