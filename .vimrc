@@ -15,6 +15,7 @@ set listchars=tab:^_,trail:_,extends:>,precedes:<
 syntax on
 "colorscheme koehler
 colorscheme desert
+"colorscheme molokai
 
 "インデント幅
 set expandtab  "インデントは半角スペース
