@@ -113,6 +113,10 @@
 ;; enable to pop `mark-ring' repeatedly like C-u C-SPC C-SPC ...
 (setq set-mark-command-repeat-pop t)
 
+;; cua-mode
+(cua-mode t)
+(setq cua-enable-cua-keys nil)  ; C-xでkill-regionになってしまうので無効化
+
 ;; スクロールを1行ずつに
 (setq scroll-conservatively 35)
 (setq scroll-margin 0)
