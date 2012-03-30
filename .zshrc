@@ -4,10 +4,10 @@ export LANG=ja_JP.UTF-8
 # prompt
 autoload colors
 colors
-PROMPT="%{${fg[cyan]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
-PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
+PROMPT="%{${fg[blue]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
+RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 
 # history
 HISTFILE=~/.zsh_history
