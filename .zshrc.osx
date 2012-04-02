@@ -17,7 +17,3 @@ export PATH=$PATH:~/work/android-sdk-mac_x86/tools
 export WORKON_HOME=$HOME/work/.virtualenvs
 source `which virtualenvwrapper.sh`
 
-# python
-#alias python='python2.7'
-export PYTHONSTARTUP=$HOME/.pythonrc.py
-

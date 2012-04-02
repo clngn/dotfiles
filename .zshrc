@@ -24,6 +24,12 @@ compinit
 alias l='ls'
 alias ll='ls -ahl'
 
+# python
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+
+# pythonbrew
+source $HOME/.pythonbrew/etc/bashrc
+
 
 case "${OSTYPE}" in
 # Mac
