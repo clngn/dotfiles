@@ -28,7 +28,7 @@ alias ll='ls -ahl'
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # pythonbrew
-source $HOME/.pythonbrew/etc/bashrc
+[ -f $HOME/.pythonbrew/etc/bashrc ] && source $HOME/.pythonbrew/etc/bashrc
 
 
 case "${OSTYPE}" in
