@@ -13,6 +13,7 @@
     st = status
     ad = add
     ci = commit
+    cia = commit --amend -C HEAD
     di = diff
     br = branch
     lo = log --graph --date=short --decorate
