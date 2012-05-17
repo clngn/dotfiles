@@ -40,6 +40,7 @@
 ;; IMEの状態をモードラインに表示
 ;; 日本語設定の後に
 (setq default-input-method "MacOSX")
+(mac-set-input-method-parameter "com.justsystems.inputmethod.atok24.Japanese" `title "[ON]")
 
 
 ;-------------------------------------------------------------------------------
