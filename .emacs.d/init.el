@@ -176,6 +176,15 @@
       (append (list '(alpha . (100 85)))
               default-frame-alist))
 
+;; フレームサイズ
+;; 高さをディスプレイ解像度に合わせて最大化
+;; Mac用(メニューバーを考慮)
+(when (window-system)
+  (set-frame-size
+   (selected-frame)
+   80
+   (- (/ (- (x-display-pixel-height) 22) (frame-char-height)) 1)))
+
 
 ;-------------------------------------------------------------------------------
 ; elisp設定
