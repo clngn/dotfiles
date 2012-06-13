@@ -20,6 +20,9 @@ setopt share_history        # share command history data
 autoload -U compinit
 compinit
 
+# Completion match Uppercase from lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # alias
 alias l='ls'
 alias ll='ls -ahl'
