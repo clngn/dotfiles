@@ -30,6 +30,12 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 # pythonbrew
 [ -f $HOME/.pythonbrew/etc/bashrc ] && source $HOME/.pythonbrew/etc/bashrc
 
+# rbenv
+eval "$(rbenv init -)"
+export PATH=$HOME/.rbenv/shims:$PATH
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 case "${OSTYPE}" in
 # Mac
