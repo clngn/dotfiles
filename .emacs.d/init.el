@@ -40,7 +40,7 @@
 ;; IMEの状態をモードラインに表示
 ;; 日本語設定の後に
 (setq default-input-method "MacOSX")
-(mac-set-input-method-parameter "com.justsystems.inputmethod.atok24.Japanese" `title "[ON]")
+(mac-set-input-method-parameter "com.justsystems.inputmethod.atok25.Japanese" `title "[ON]")
 
 
 ;-------------------------------------------------------------------------------
@@ -340,6 +340,12 @@
              (setq cssm-indent-function #'cssm-c-style-indenter)
              (setq cssm-newline-before-closing-bracket t)  ; 中括弧挿入時に改行
              ))
+
+;; less-css-mode
+(autoload 'less-css-mode "less-css-mode" nil t)
+(setq auto-mode-alist
+      (cons '("\\.less\\'" . less-css-mode) auto-mode-alist))
+
 
 ;; js2-mode
 (autoload 'js2-mode "js2" nil t)
