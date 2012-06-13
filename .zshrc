@@ -34,7 +34,7 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 [ -f $HOME/.pythonbrew/etc/bashrc ] && source $HOME/.pythonbrew/etc/bashrc
 
 # rbenv
-eval "$(rbenv init -)"
+[ -f $HOME/.rbenv/shims ] && eval "$(rbenv init -)"
 export PATH=$HOME/.rbenv/shims:$PATH
 
 # nodebrew
