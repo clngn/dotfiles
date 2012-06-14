@@ -345,6 +345,8 @@
 (autoload 'less-css-mode "less-css-mode" nil t)
 (setq auto-mode-alist
       (cons '("\\.less\\'" . less-css-mode) auto-mode-alist))
+(add-to-list 'ac-modes 'less-css-mode)  ; ac-mode
+(add-hook 'less-css-mode-hook 'ac-css-mode-setup)
 
 
 ;; js2-mode
