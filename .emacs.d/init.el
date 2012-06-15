@@ -346,8 +346,13 @@
 (setq auto-mode-alist
       (cons '("\\.less\\'" . less-css-mode) auto-mode-alist))
 (add-to-list 'ac-modes 'less-css-mode)  ; ac-mode
-(add-hook 'less-css-mode-hook 'ac-css-mode-setup)
-
+(add-hook 'less-css-mode-hook
+          '(lambda()
+             'ac-css-mode-setup
+             ; インデント手動(とりあえず)
+             (setq tab-always-indent nil)
+             (setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
+             ))
 
 ;; js2-mode
 (autoload 'js2-mode "js2" nil t)
