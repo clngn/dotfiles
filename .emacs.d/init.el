@@ -54,6 +54,9 @@
 (setq tab-width 4)
 (setq-default tab-width 4)
 
+;; 自動インデント
+(setq-default tab-always-indent t)
+
 ;; コメントアウトの設定
 (setq comment-style 'multi-line)
 
