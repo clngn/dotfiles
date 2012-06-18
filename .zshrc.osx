@@ -17,9 +17,12 @@ alias py27='python2.7'
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.6/site-packages/
 
 # Android SDK
-export PATH=$PATH:~/work/android-sdk-mac_x86/tools
+export PATH=$PATH:$HOME/work/android-sdk-mac_x86/tools
 
 # virtualenv
 export WORKON_HOME=$HOME/work/.virtualenvs
 source `which virtualenvwrapper.sh`
+
+# scripts
+export PATH=$PATH:$HOME/bin
 
