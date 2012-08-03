@@ -10,11 +10,6 @@
 ; Mac設定
 ;-------------------------------------------------------------------------------
 
-;; パスの追加
-(setq load-path (cons "~/.emacs.d/elisp/" load-path))
-(setq load-path (cons "~/.emacs.d/elisp/apel/" load-path))
-(setq load-path (cons "~/.emacs.d/elisp/emu/" load-path))
-
 ;; 日本語フォントの設定
 (when (and (window-system) (>= emacs-major-version 23))
     (set-face-attribute 'default nil
@@ -40,12 +35,32 @@
 ;; IMEの状態をモードラインに表示
 ;; 日本語設定の後に
 (setq default-input-method "MacOSX")
-(mac-set-input-method-parameter "com.justsystems.inputmethod.atok25.Japanese" `title "[ON]")
+(mac-set-input-method-parameter "com.justsystems.inputmethod.atok25.Japanese" `title "[ON]")  ; ATOK2012
 
 
 ;-------------------------------------------------------------------------------
 ; 一般設定
 ;-------------------------------------------------------------------------------
+
+;; elispパスの追加
+(setq load-path (cons "~/.emacs.d/elisp/" load-path))
+(setq load-path (cons "~/.emacs.d/elisp/apel/" load-path))
+(setq load-path (cons "~/.emacs.d/elisp/emu/" load-path))
+
+;; PATHの設定
+(dolist (dir (list
+              "/sbin"
+              "/usr/sbin"
+              "/bin"
+              "/usr/bin"
+              "/usr/local/bin"
+              (expand-file-name "~/bin")  ; 絶対パスに展開
+              (expand-file-name "~/.emacs/bin")
+              ))
+  ;; PATHとexec-pathに同じものを追加
+  (when (and (file-exists-p dir) (not (member dir exec-path)))
+    (setenv "PATH" (concat dir ":" (getenv "PATH")))
+    (setq exec-path (append (list dir) exec-path))))
 
 ;; インデントを半角スペースに、幅は4
 (setq indent-tabs-mode nil)
@@ -188,6 +203,16 @@
    80
    (- (/ (- (x-display-pixel-height) 22) (frame-char-height)) 1)))
 
+;; C-x b でiswitchb
+(iswitchb-mode 1)
+(add-hook 'iswitchb-define-mode-map-hook
+          (lambda ()
+            ;; C-n/p/f/bで選択
+            (define-key iswitchb-mode-map "\C-n" 'iswitchb-next-match)
+            (define-key iswitchb-mode-map "\C-p" 'iswitchb-prev-match)
+            (define-key iswitchb-mode-map "\C-f" 'iswitchb-next-match)
+            (define-key iswitchb-mode-map "\C-b" 'iswitchb-prev-match)))
+
 
 ;-------------------------------------------------------------------------------
 ; elisp設定
@@ -254,6 +279,8 @@
 ;; twittering-mode
 (setq load-path (cons "~/.emacs.d/elisp/twittering-mode-2.0.0/" load-path))
 (require 'twittering-mode)
+(setq twittering-use-master-password t)  ; マスターパスワードを使う
+(setq twittering-status-format "%i @%s %S %p:\n %T\n  [%@]%r %R %f%L\n----------------------------------------")  ; 表示する書式
 
 
 ;-------------------------------------------------------------------------------
