@@ -231,10 +231,11 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/auto-complete/dict")
 (global-auto-complete-mode t)
 (ac-config-default)
-(setq ac-dwim t)
-(setq ac-auto-start 3)
-(define-key ac-completing-map (kbd "C-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(setq ac-dwim t)  ; 補完時にTABをRETの挙動に
+(setq ac-auto-start 3)  ; 3文字以上入力で補完開始
+(setq ac-use-menu-map t)  ; メニュー表示時のみ有効なキーマップを設定
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;; auto-install
 (setq load-path (cons "~/.emacs.d/auto-install/" load-path))
