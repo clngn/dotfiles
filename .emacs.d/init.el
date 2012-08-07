@@ -43,9 +43,17 @@
 ;-------------------------------------------------------------------------------
 
 ;; elispパスの追加
-(setq load-path (cons "~/.emacs.d/elisp/" load-path))
-(setq load-path (cons "~/.emacs.d/elisp/apel/" load-path))
-(setq load-path (cons "~/.emacs.d/elisp/emu/" load-path))
+;; load-pathを追加する関数を定義
+(defun add-to-load-path (&rest paths)
+  (let (path)
+    (dolist (path paths paths)
+      (let ((default-directory
+              (expand-file-name (concat user-emacs-directory path))))
+        (add-to-list 'load-path default-directory)
+        (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+            (normal-top-level-add-subdirs-to-load-path))))))
+;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
+(add-to-load-path "elisp")
 
 ;; PATHの設定
 (dolist (dir (list
@@ -226,7 +234,6 @@
 (global-set-key (kbd "C-S-<tab>") 'elscreen-previous)  ; タブ移動
 
 ;; auto-complete
-(setq load-path (cons "~/.emacs.d/elisp/auto-complete/" load-path))
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/auto-complete/dict")
 (global-auto-complete-mode t)
@@ -281,7 +288,6 @@
         ))
 
 ;; twittering-mode
-(setq load-path (cons "~/.emacs.d/elisp/twittering-mode-2.0.0/" load-path))
 (require 'twittering-mode)
 (setq twittering-use-master-password t)  ; マスターパスワードを使う
 (setq twittering-status-format "%i @%s %S %p:\n %T\n  [%@]%r %R %f%L\n----------------------------------------")  ; 表示する書式
