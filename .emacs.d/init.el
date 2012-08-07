@@ -10,24 +10,26 @@
 ; Mac設定
 ;-------------------------------------------------------------------------------
 
-;; 日本語フォントの設定
+;; フォントの設定
 (when (and (window-system) (>= emacs-major-version 23))
-    (set-face-attribute 'default nil
-                        :family "monaco"
-                        :height 140)
-   (set-fontset-font
-     nil 'japanese-jisx0208
-     (font-spec :family "MigMix 1M"))
-
-    (setq face-font-rescale-alist
-          '(("^-apple-hiragino.*" . 1.2)
-            (".*osaka-bold.*" . 1.2)
-            (".*osaka-medium.*" . 1.2)
-            (".*courier-bold-.*-mac-roman" . 1.0)
-            (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
-            (".*monaco-bold-.*-mac-roman" . 0.9)
-            ("-cdac$" . 1.3)
-            (".*MigMix.*" . 1.2))))
+  ;; asciiフォントの設定
+  (set-face-attribute 'default nil
+                      :family "monaco"
+                      :height 140)
+  ;; 日本語フォントの設定
+  (set-fontset-font
+   nil 'japanese-jisx0208
+   (font-spec :family "MigMix 1M"))
+  ;; フォントの横幅を調整
+  (setq face-font-rescale-alist
+        '(("^-apple-hiragino.*" . 1.2)
+          (".*osaka-bold.*" . 1.2)
+          (".*osaka-medium.*" . 1.2)
+          (".*courier-bold-.*-mac-roman" . 1.0)
+          (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
+          (".*monaco-bold-.*-mac-roman" . 0.9)
+          ("-cdac$" . 1.3)
+          (".*MigMix.*" . 1.2))))
 
 ;; optionキーをmeta
 (setq mac-option-modifier 'meta)
@@ -88,10 +90,6 @@
 
 ;; C-tでウインドウ移動
 (global-set-key (kbd "C-t") 'next-multiframe-window)
-
-;; 改行でオートインデント
-;(global-set-key (kbd "C-m") 'newline-and-indent)
-;(global-set-key (kbd "C-j") 'newline)
 
 ;; タイトルバーに今開いてるファイル名を表示
 (setq frame-title-format "%f - emacs")
