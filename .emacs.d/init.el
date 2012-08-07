@@ -91,6 +91,9 @@
 ;; C-tでウインドウ移動
 (global-set-key (kbd "C-t") 'next-multiframe-window)
 
+;; 折り返しトグルコマンド
+(global-set-key (kbd "C-c l") 'toggle-truncate-lines)
+
 ;; タイトルバーに今開いてるファイル名を表示
 (setq frame-title-format "%f - emacs")
 
