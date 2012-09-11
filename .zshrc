@@ -43,6 +43,9 @@ export PATH=$HOME/.rbenv/shims:$PATH
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# julius
+export PATH=$HOME/work/julius/build/bin:$PATH
+
 case "${OSTYPE}" in
 # Mac
 darwin*)
