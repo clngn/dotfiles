@@ -207,10 +207,17 @@
 ;; 高さをディスプレイ解像度に合わせて最大化
 ;; Mac用(メニューバーを考慮)
 (when (window-system)
-  (set-frame-size
-   (selected-frame)
-   80
-   (- (/ (- (x-display-pixel-height) 22) (frame-char-height)) 1)))
+  (defvar myleft (- (x-display-pixel-width) (frame-pixel-width))
+    "左端にフレームをセット")
+  (defvar myheight (- (/ (- (x-display-pixel-height) 22) (frame-char-height)) 1)
+    "ディスプレイ解像度に合わせた高さを設定")
+  (setq initial-frame-alist
+        (append (list
+                 (cons 'width 80)
+                 (cons 'height myheight)
+                 (cons 'top 1)
+                 (cons 'left myleft)
+                 ) initial-frame-alist)))
 
 ;; C-x b でiswitchb
 (iswitchb-mode 1)
