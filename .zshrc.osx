@@ -11,17 +11,15 @@ alias emacsnw='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias cot='open -a CotEditor'
 alias prev='open -a Preview'
 
-alias py27='python2.7'
-
-# python
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.6/site-packages/
+alias py27='$HOME/work/python/python2.7/bin/python2.7'
 
 # Android SDK
 export PATH=$PATH:$HOME/work/android-sdk-mac_x86/tools
 
 # virtualenv
+export VIRTUALENVWRAPPER_PYTHON=$HOME/work/python/python2.7/bin/python
 export WORKON_HOME=$HOME/work/.virtualenvs
-source `which virtualenvwrapper.sh`
+source `which $HOME/work/python/python2.7/bin/virtualenvwrapper.sh`
 
 # scripts
 export PATH=$PATH:$HOME/bin
