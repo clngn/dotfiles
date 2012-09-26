@@ -146,13 +146,12 @@
 ;; 右端で折り返し
 (setq truncate-partial-width-windows nil)
 
-;; マウス設定
-(global-set-key [wheel-up] '(lambda () "" (interactive) (scroll-down 1)))
-(global-set-key [wheel-down] '(lambda () "" (interactive) (scroll-up 1)))
-(global-set-key [double-wheel-up] '(lambda () "" (interactive) (scroll-down 1)))
-(global-set-key [double-wheel-down] '(lambda () "" (interactive) (scroll-up 1)))
-(global-set-key [triple-wheel-up] '(lambda () "" (interactive) (scroll-down 2)))
-(global-set-key [triple-wheel-down] '(lambda () "" (interactive) (scroll-up 2)))
+;; マウスホイールの設定
+;; マウスホイールでのスクロール速度の設定
+;; 通常 1、+Shift 5、+Control 1画面
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 5) ((control) . nil)))
+;; マウスホイールでのスクロールを加速しない
+(setq mouse-wheel-progressive-speed nil)
 
 ;; 現在の関数名をモードラインに表示
 (which-function-mode t)
