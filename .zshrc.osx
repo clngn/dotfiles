@@ -18,6 +18,8 @@ export PATH=$PATH:$HOME/work/android-sdk-mac_x86/tools
 
 # virtualenv
 export VIRTUALENVWRAPPER_PYTHON=$HOME/work/python/python2.7/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/work/python/python2.7/bin/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export WORKON_HOME=$HOME/work/.virtualenvs
 source `which $HOME/work/python/python2.7/bin/virtualenvwrapper.sh`
 
