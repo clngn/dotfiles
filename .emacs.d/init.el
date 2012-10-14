@@ -34,6 +34,9 @@
 ;; optionキーをmeta
 (setq mac-option-modifier 'meta)
 
+;; commandキーをsuper
+(setq mac-command-modifier 'super)
+
 ;; IMEの状態をモードラインに表示
 ;; 日本語設定の後に
 (setq default-input-method "MacOSX")
@@ -93,6 +96,9 @@
 
 ;; 折り返しトグルコマンド
 (global-set-key (kbd "C-c l") 'toggle-truncate-lines)
+
+;; ヘルプ
+(global-set-key (kbd "C-x ?") 'help-command)
 
 ;; タイトルバーに今開いてるファイル名を表示
 (setq frame-title-format "%f - emacs")
