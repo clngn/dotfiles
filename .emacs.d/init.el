@@ -208,7 +208,7 @@
 (when (window-system)
   (defvar myleft (- (x-display-pixel-width) (frame-pixel-width))
     "左端にフレームをセット")
-  (defvar myheight (- (/ (- (x-display-pixel-height) 22) (frame-char-height)) 1)
+  (defvar myheight (- (/ (- (x-display-pixel-height) 22) (frame-char-height)) 2)
     "ディスプレイ解像度に合わせた高さを設定")
   (setq initial-frame-alist
         (append (list
@@ -227,6 +227,11 @@
             (define-key iswitchb-mode-map "\C-p" 'iswitchb-prev-match)
             (define-key iswitchb-mode-map "\C-f" 'iswitchb-next-match)
             (define-key iswitchb-mode-map "\C-b" 'iswitchb-prev-match)))
+
+;; tramp
+(require 'tramp)
+(add-to-list 'backup-directory-alist
+             (cons tramp-file-name-regexp nil))  ; 自動でバックアップファイルをつくらない
 
 
 ;-------------------------------------------------------------------------------
