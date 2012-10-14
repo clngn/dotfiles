@@ -291,6 +291,7 @@
 
 ;; anything
 (require 'anything-startup)
+(global-set-key (kbd "C-;") 'anything-for-files)
 
 ;; org-remember
 (setq org-startup-truncated nil)
