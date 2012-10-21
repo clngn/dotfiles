@@ -33,9 +33,6 @@ alias ll='ls -ahl'
 # python
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
-# pythonbrew
-[ -f $HOME/.pythonbrew/etc/bashrc ] && source $HOME/.pythonbrew/etc/bashrc
-
 # rbenv
 [ -f $HOME/.rbenv/shims ] && eval "$(rbenv init -)"
 export PATH=$HOME/.rbenv/shims:$PATH
