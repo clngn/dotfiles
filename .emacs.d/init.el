@@ -300,7 +300,7 @@
 
 ;; yasnippet
 (require 'yasnippet)
-(yas/initialize)
+(yas--initialize)
 (yas/load-directory "~/.emacs.d/snippets")
 
 ;; anything
