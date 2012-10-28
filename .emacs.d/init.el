@@ -429,9 +429,10 @@
       (cons '("\\.less\\'" . less-css-mode) auto-mode-alist))
 (setq exec-path (append (list (expand-file-name "~/.nodebrew/current/bin")) exec-path))
 (add-to-list 'ac-modes 'less-css-mode)  ; ac-mode
+(add-hook 'less-css-mode-hook 'ac-css-mode-setup)
 (add-hook 'less-css-mode-hook
           '(lambda()
-             'ac-css-mode-setup  ; ac-mode
+             (add-to-list 'ac-user-dictionary-files "~/.emacs.d/elisp/auto-complete/dict/css-mode")
              ))
 
 ;; js2-mode
