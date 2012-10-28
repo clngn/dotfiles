@@ -242,6 +242,10 @@
 (add-to-list 'backup-directory-alist
              (cons tramp-file-name-regexp nil))  ; 自動でバックアップファイルをつくらない
 
+;; 閉じ括弧の補完
+(when (>= emacs-major-version 24)
+    (electric-pair-mode t))
+
 
 ;-------------------------------------------------------------------------------
 ; elisp設定
@@ -405,10 +409,19 @@
       (cons '("\\.css\\'" . css-mode) auto-mode-alist))
 (add-hook 'css-mode-hook
           '(lambda ()
-             (setq cssm-indent-level 4)
-             (setq cssm-indent-function #'cssm-c-style-indenter)
-             (setq cssm-newline-before-closing-bracket t)  ; 中括弧挿入時に改行
+             (define-key css-mode-map "{" 'css-electric-pair)
+             (setq css-indent-offset 4)
              ))
+(defun css-electric-pair ()
+  ;; http://d.hatena.ne.jp/CortYuming/20120110/p1
+  (interactive)
+  (insert "{")
+  (newline-and-indent)
+  (newline-and-indent)
+  (insert "}")
+  (indent-for-tab-command)
+  (previous-line)
+  (indent-for-tab-command))
 
 ;; less-css-mode
 (autoload 'less-css-mode "less-css-mode" nil t)
@@ -417,10 +430,7 @@
 (add-to-list 'ac-modes 'less-css-mode)  ; ac-mode
 (add-hook 'less-css-mode-hook
           '(lambda()
-             'ac-css-mode-setup
-             ; インデント手動(とりあえず)
-             (setq tab-always-indent nil)
-             (setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
+             'ac-css-mode-setup  ; ac-mode
              ))
 
 ;; js2-mode
