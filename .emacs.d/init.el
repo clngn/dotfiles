@@ -500,7 +500,7 @@
           '(lambda ()
              (setq auto-fill-function nil)
              ))
-(setq tex-command "~/.emacs.d/platex2pdf") ; スクリプトを使って直接pdfにコンパイル
+(setq tex-command "platex2pdf") ; スクリプトを使って直接pdfにコンパイル
 (setq dvi2-command "open -a Preview.app")  ; プレビュー.appでpdfを開く
 
 
