@@ -5,10 +5,12 @@
 *.pyc
 
 #Emacs
-.emacs.d/auto-save-list/
 .emacs.d/ac-comphist.dat
-.emacs.d/tramp
+.emacs.d/auto-install
+.emacs.d/auto-save-list
+.emacs.d/elisp
 .emacs.d/elpa
+.emacs.d/tramp
 
 # Vim
 .vim/.netrwhist
