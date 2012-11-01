@@ -318,11 +318,13 @@
              (let ((n (position selected names :test 'equal)))
                (nth n choices))
            (signal 'quit "user quit!"))))
-     (custom-set-variables '(yas/prompt-functions '(my-yas/prompt)))))
+     (custom-set-variables '(yas/prompt-functions '(my-yas/prompt)))
+     (define-key anything-command-map (kbd "y") 'yas/insert-snippet)))
 
 ;; anything
 (require 'anything-startup)
-(global-set-key (kbd "C-;") 'anything-for-files)
+(global-set-key (kbd "C-;") 'anything-command-map)
+(global-set-key (kbd "C-x b") 'anything-for-files)
 
 ;; org-remember
 (setq org-startup-truncated nil)
