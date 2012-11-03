@@ -301,6 +301,8 @@
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
+(setq yas/root-directory "~/.emacs.d/snippets")
+(yas/load-directory yas/root-directory)
 ;; anything interface
 ;; http://d.hatena.ne.jp/sugyan/20120101/1325429637
 (eval-after-load "anything-config"
@@ -481,6 +483,8 @@
              (setq js-expr-indent-offset 4)
              (setq indent-tabs-mode nil)
              (set (make-local-variable 'indent-line-function) 'js-indent-line)
+
+             (setq yas/mode-symbol 'js-mode)
              ))
 
 

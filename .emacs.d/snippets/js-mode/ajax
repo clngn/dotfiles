@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: jQuery ajax
+# key: ajax
+# contributor: clngn
+# --
+$.ajax({
+    type: '${1:POST}',
+    url: '$2',
+    data: ${3:data},
+    contentType: '$4',
+    success: function(msg) {
+    },
+    error: function(msg) {
+    }
+});
+$0
