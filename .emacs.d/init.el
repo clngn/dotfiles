@@ -594,7 +594,7 @@ static char * arrow_right[] = {
                     :box nil)
 (set-face-attribute 'mode-line-inactive nil
                     :foreground "#fff"
-                    :background color4
+                    :background "gray10"
                     :box nil)
 
 (setq-default mode-line-format
@@ -608,16 +608,15 @@ static char * arrow_right[] = {
                                (propertize " " 'face 'mode-line-color-3)
                                (propertize " " 'display arrow-right-3)))
 
+               '(vc-mode vc-mode)
+
                ;; Justify right by filling with spaces to right fringe - 16
                ;; (16 should be computed rahter than hardcoded)
-               '(:eval (propertize " " 'display '((space :align-to (- right-fringe 20)))))
+               '(:eval (propertize " " 'display '((space :align-to (- right-fringe 16)))))
 
                '(:eval (concat (propertize " " 'display arrow-left-3)
-                               (propertize " " 'face 'mode-line-color-3)
-                               (powerline-vc 'center color3)
-                               (propertize " " 'face 'mode-line-color-3)))
+                               (propertize " %p " 'face 'mode-line-color-3)))
                '(:eval (concat (propertize " " 'display arrow-left-2)
-                               (propertize " %p " 'face 'mode-line-color-2)))
-               '(:eval (concat (propertize " " 'display arrow-left-1)
-                               (propertize "%4l:%2c  " 'face 'mode-line-color-1)))
+                               (propertize "%4l:%2c  " 'face 'mode-line-color-2)))
+
                ))
