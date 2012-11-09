@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: 1column figure
+# key: fig
+# --
+\begin{figure}[htbp]
+ \begin{center}
+  \includegraphics[width=150mm]{$1.eps}
+  \caption{$2}
+  \label{fig:label}
+ \end{center}
+\end{figure}
+$0
