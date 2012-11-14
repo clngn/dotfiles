@@ -248,6 +248,17 @@
     (electric-pair-mode t))
 
 
+;; VCSの設定
+;; VCSのシンボリックリンクの読み込みを許可
+(setq vc-follow-symlinks t)
+;; VCSによる変更をチェック
+(setq auto-revert-check-vc-info t)
+;; バッファ自動更新
+(global-auto-revert-mode t)
+;; バッファ更新頻度(秒)
+(setq auto-revert-interval 1)
+
+
 ;-------------------------------------------------------------------------------
 ; elisp設定
 ;-------------------------------------------------------------------------------
