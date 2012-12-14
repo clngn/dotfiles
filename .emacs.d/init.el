@@ -110,7 +110,12 @@
 (menu-bar-mode t)
 
 ;; スクロールバーを右側に表示
-(set-scroll-bar-mode 'right)
+;; (set-scroll-bar-mode 'right)
+;; スクロールバー非表示
+(set-scroll-bar-mode nil)
+
+;; フリンジ表示
+(setq-default indicate-buffer-boundaries 'right)
 
 ;; バックアップファイルの無効
 (setq make-backup-files nil)
@@ -525,7 +530,7 @@
 
 ;; powerline
 (require 'powerline)
-(set-scroll-bar-mode 'right)  ;; スクロールバー表示
+;; (set-scroll-bar-mode 'right)  ;; スクロールバー表示
 (defun arrow-right-xpm (color1 color2)
   "Return an XPM right arrow string representing."
   (format "/* XPM */
