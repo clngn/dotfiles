@@ -260,15 +260,15 @@
                  (cons 'left myleft)
                  ) initial-frame-alist)))
 
-;; C-x b でiswitchb
-(iswitchb-mode 1)
-(add-hook 'iswitchb-define-mode-map-hook
-          (lambda ()
-            ;; C-n/p/f/bで選択
-            (define-key iswitchb-mode-map "\C-n" 'iswitchb-next-match)
-            (define-key iswitchb-mode-map "\C-p" 'iswitchb-prev-match)
-            (define-key iswitchb-mode-map "\C-f" 'iswitchb-next-match)
-            (define-key iswitchb-mode-map "\C-b" 'iswitchb-prev-match)))
+;; C-x b でiswitchb -> anythingへ
+;; (iswitchb-mode 1)
+;; (add-hook 'iswitchb-define-mode-map-hook
+;;           (lambda ()
+;;             ;; C-n/p/f/bで選択
+;;             (define-key iswitchb-mode-map "\C-n" 'iswitchb-next-match)
+;;             (define-key iswitchb-mode-map "\C-p" 'iswitchb-prev-match)
+;;             (define-key iswitchb-mode-map "\C-f" 'iswitchb-next-match)
+;;             (define-key iswitchb-mode-map "\C-b" 'iswitchb-prev-match)))
 
 ;; tramp
 (require 'tramp)
