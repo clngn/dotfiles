@@ -197,6 +197,13 @@
    ((t (:background "gray"))))
  '(region
    ((t (:background "LightSteelBlue" :foreground "black"))))
+ '(whitespace-tab
+   ((t (:background nil :foreground "gray32" :underline t))))
+ '(whitespace-space
+   ((t (:foreground "yellow" :weight bold))))
+ '(trailing-whitespace
+   ((t (:background nil :foreground "gray32" :underline t))))
+ ;; elscreen
  '(elscreen-tab-background-face
    ((t (:background "gray10"))))
  '(elscreen-tab-control-face
@@ -205,13 +212,34 @@
    ((t (:background "gray75" :foreground "black"))))
  '(elscreen-tab-other-screen-face
    ((t (:background "gray30" :foreground "gray80"))))
- '(whitespace-tab
-   ((t (:background nil :foreground "gray32" :underline t))))
- '(whitespace-space
-   ((t (:foreground "yellow" :weight bold))))
- '(trailing-whitespace
-   ((t (:background nil :foreground "gray32" :underline t))))
  )
+
+;; mode-line
+(set-face-attribute 'mode-line nil
+                    :background "#2a729a"
+                    :foreground "#fff"
+                    :box nil)
+(set-face-attribute 'mode-line-inactive nil
+                    :background "#334d66"
+                    :foreground "#adadad"
+                    :box nil)
+(setq-default mode-line-format
+              '((:eval (if (display-graphic-p) " " "-"))
+                mode-line-mule-info  ; 文字コードやIME
+                ;; mode-line-client
+                mode-line-modified  ; 変更済みかどうか
+                "  "
+                ;; mode-line-frame-identification
+                mode-line-buffer-identification  ; ファイル名
+                " "
+                mode-line-modes  ; モード名
+                " "
+                (vc-mode vc-mode)  ; VCS
+                "  "
+                mode-line-position  ; 位置
+                ))
+
+;; 透過
 (setq default-frame-alist
       (append (list '(alpha . (100 85)))
               default-frame-alist))
@@ -278,6 +306,7 @@
 (require 'elscreen)
 (elscreen-start)
 (setq elscreen-tab-display-kill-screen nil)  ; タブ左端のxを非表示
+(setq elscreen-display-screen-number nil)  ; モードラインでの表示を非表示
 (global-set-key (kbd "M-t") 'elscreen-create)  ; 新規タブ
 (global-set-key (kbd "M-T") 'elscreen-clone)   ; 新規タブでカレントバッファ引継ぎ
 (global-set-key (kbd "C-<tab>") 'elscreen-next)        ; タブ移動
@@ -532,116 +561,116 @@
 
 
 ;; powerline
-(require 'powerline)
-;; (set-scroll-bar-mode 'right)  ;; スクロールバー表示
-(defun arrow-right-xpm (color1 color2)
-  "Return an XPM right arrow string representing."
-  (format "/* XPM */
-static char * arrow_right[] = {
-\"12 18 2 1\",
-\".     c %s\",
-\"      c %s\",
-\".           \",
-\"..          \",
-\"...         \",
-\"....        \",
-\".....       \",
-\"......      \",
-\".......     \",
-\"........    \",
-\".........   \",
-\".........   \",
-\"........    \",
-\".......     \",
-\"......      \",
-\".....       \",
-\"....        \",
-\"...         \",
-\"..          \",
-\".           \"};"  color1 color2))
+;; (require 'powerline)
+;; ;; (set-scroll-bar-mode 'right)  ;; スクロールバー表示
+;; (defun arrow-right-xpm (color1 color2)
+;;   "Return an XPM right arrow string representing."
+;;   (format "/* XPM */
+;; static char * arrow_right[] = {
+;; \"12 18 2 1\",
+;; \".     c %s\",
+;; \"      c %s\",
+;; \".           \",
+;; \"..          \",
+;; \"...         \",
+;; \"....        \",
+;; \".....       \",
+;; \"......      \",
+;; \".......     \",
+;; \"........    \",
+;; \".........   \",
+;; \".........   \",
+;; \"........    \",
+;; \".......     \",
+;; \"......      \",
+;; \".....       \",
+;; \"....        \",
+;; \"...         \",
+;; \"..          \",
+;; \".           \"};"  color1 color2))
 
-(defun arrow-left-xpm (color1 color2)
-  "Return an XPM right arrow string representing."
-  (format "/* XPM */
-static char * arrow_right[] = {
-\"12 18 2 1\",
-\".     c %s\",
-\"      c %s\",
-\"           .\",
-\"          ..\",
-\"         ...\",
-\"        ....\",
-\"       .....\",
-\"      ......\",
-\"     .......\",
-\"    ........\",
-\"   .........\",
-\"   .........\",
-\"    ........\",
-\"     .......\",
-\"      ......\",
-\"       .....\",
-\"        ....\",
-\"         ...\",
-\"          ..\",
-\"           .\"};"  color2 color1))
+;; (defun arrow-left-xpm (color1 color2)
+;;   "Return an XPM right arrow string representing."
+;;   (format "/* XPM */
+;; static char * arrow_right[] = {
+;; \"12 18 2 1\",
+;; \".     c %s\",
+;; \"      c %s\",
+;; \"           .\",
+;; \"          ..\",
+;; \"         ...\",
+;; \"        ....\",
+;; \"       .....\",
+;; \"      ......\",
+;; \"     .......\",
+;; \"    ........\",
+;; \"   .........\",
+;; \"   .........\",
+;; \"    ........\",
+;; \"     .......\",
+;; \"      ......\",
+;; \"       .....\",
+;; \"        ....\",
+;; \"         ...\",
+;; \"          ..\",
+;; \"           .\"};"  color2 color1))
 
-(defconst color1 "#8b7258")
-(defconst color2 "#6f5b46")
-(defconst color3 "#544535")
-(defconst color4 "#372d23")
+;; (defconst color1 "#4f99c0")
+;; (defconst color2 "#4185b4")
+;; (defconst color3 "#2a729a")
+;; (defconst color4 "#334d66")
 
-(defvar arrow-right-1 (create-image (arrow-right-xpm color1 color2) 'xpm t :ascent 'center))
-(defvar arrow-right-2 (create-image (arrow-right-xpm color2 color3) 'xpm t :ascent 'center))
-(defvar arrow-right-3 (create-image (arrow-right-xpm color3 "None") 'xpm t :ascent 'center))
-(defvar arrow-left-1  (create-image (arrow-left-xpm color2 color1) 'xpm t :ascent 'center))
-(defvar arrow-left-2  (create-image (arrow-left-xpm color3 color2) 'xpm t :ascent 'center))
-(defvar arrow-left-3  (create-image (arrow-left-xpm "None" color3) 'xpm t :ascent 'center))
+;; (defvar arrow-right-1 (create-image (arrow-right-xpm color1 color2) 'xpm t :ascent 'center))
+;; (defvar arrow-right-2 (create-image (arrow-right-xpm color2 color3) 'xpm t :ascent 'center))
+;; (defvar arrow-right-3 (create-image (arrow-right-xpm color3 "None") 'xpm t :ascent 'center))
+;; (defvar arrow-left-1  (create-image (arrow-left-xpm color2 color1) 'xpm t :ascent 'center))
+;; (defvar arrow-left-2  (create-image (arrow-left-xpm color3 color2) 'xpm t :ascent 'center))
+;; (defvar arrow-left-3  (create-image (arrow-left-xpm "None" color3) 'xpm t :ascent 'center))
 
-(make-face 'mode-line-color-1)
-(set-face-attribute 'mode-line-color-1 nil
-                    :foreground "#fff"
-                    :background color1)
+;; (make-face 'mode-line-color-1)
+;; (set-face-attribute 'mode-line-color-1 nil
+;;                     :foreground "#fff"
+;;                     :background color1)
 
-(make-face 'mode-line-color-2)
-(set-face-attribute 'mode-line-color-2 nil
-                    :foreground "#fff"
-                    :background color2)
+;; (make-face 'mode-line-color-2)
+;; (set-face-attribute 'mode-line-color-2 nil
+;;                     :foreground "#fff"
+;;                     :background color2)
 
-(make-face 'mode-line-color-3)
-(set-face-attribute 'mode-line-color-3 nil
-                    :foreground "#fff"
-                    :background color3)
+;; (make-face 'mode-line-color-3)
+;; (set-face-attribute 'mode-line-color-3 nil
+;;                     :foreground "#fff"
+;;                     :background color3)
 
-(set-face-attribute 'mode-line nil
-                    :foreground "#fff"
-                    :background color4
-                    :box nil)
-(set-face-attribute 'mode-line-inactive nil
-                    :foreground "#fff"
-                    :background "gray10"
-                    :box nil)
+;; (set-face-attribute 'mode-line nil
+;;                     :foreground "#fff"
+;;                     :background color4
+;;                     :box nil)
+;; (set-face-attribute 'mode-line-inactive nil
+;;                     :foreground "#fff"
+;;                     :background "gray10"
+;;                     :box nil)
 
-(setq-default mode-line-format
-              (list
-               '(:eval (concat (propertize " %Z%* " 'face 'mode-line-color-1)
-                               (propertize " " 'display arrow-right-1)))
-               '(:eval (concat (propertize " %b " 'face 'mode-line-color-2)
-                               (propertize " " 'display arrow-right-2)))
-               '(:eval (concat (propertize " %m" 'face 'mode-line-color-3)
-                               (powerline-minor-modes 'left color3)
-                               (propertize " " 'face 'mode-line-color-3)
-                               (propertize " " 'display arrow-right-3)))
+;; (setq-default mode-line-format
+;;               (list
+;;                '(:eval (concat (propertize " %Z%* " 'face 'mode-line-color-1)
+;;                                (propertize " " 'display arrow-right-1)))
+;;                '(:eval (concat (propertize " %b " 'face 'mode-line-color-2)
+;;                                (propertize " " 'display arrow-right-2)))
+;;                '(:eval (concat (propertize " %m" 'face 'mode-line-color-3)
+;;                                (powerline-minor-modes 'left color3)
+;;                                (propertize " " 'face 'mode-line-color-3)
+;;                                (propertize " " 'display arrow-right-3)))
 
-               '(vc-mode vc-mode)
+;;                '(vc-mode vc-mode)
 
-               ;; Justify right by filling with spaces to right fringe - 16
-               ;; (16 should be computed rahter than hardcoded)
-               '(:eval (propertize " " 'display '((space :align-to (- right-fringe 16)))))
+;;                ;; Justify right by filling with spaces to right fringe - 16
+;;                ;; (16 should be computed rahter than hardcoded)
+;;                '(:eval (propertize " " 'display '((space :align-to (- right-fringe 16)))))
 
-               '(:eval (concat (propertize " " 'display arrow-left-3)
-                               (propertize " %p " 'face 'mode-line-color-3)))
-               '(:eval (concat (propertize " " 'display arrow-left-2)
-                               (propertize "%4l:%2c  " 'face 'mode-line-color-2)))
+;;                '(:eval (concat (propertize " " 'display arrow-left-3)
+;;                                (propertize " %p " 'face 'mode-line-color-3)))
+;;                '(:eval (concat (propertize " " 'display arrow-left-2)
+;;                                (propertize "%4l:%2c  " 'face 'mode-line-color-2)))
 
-               ))
+;;                ))
