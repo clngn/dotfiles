@@ -106,8 +106,10 @@
 ;; ツールバーを表示しない
 (tool-bar-mode 0)
 
-;; メニューバーを表示
-(menu-bar-mode t)
+;; メニューバーの表示切り替え
+(if (window-system)
+    (menu-bar-mode t)
+  (menu-bar-mode 0))
 
 ;; スクロールバーを右側に表示
 ;; (set-scroll-bar-mode 'right)
