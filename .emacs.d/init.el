@@ -141,7 +141,7 @@
 ;(setq inhibit-startup-message t)
 
 ;; 起動時の画像変更
-(setq fancy-splash-image "~/.emacs.d/splash_azu.png")
+(setq fancy-splash-image "~/.emacs.d/splash.png")
 
 ;; ファイルをD&Dで開く
 (define-key global-map [ns-drag-file] 'ns-find-file)
