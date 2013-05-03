@@ -26,6 +26,10 @@ set softtabstop=0 "0の場合はtabstopで指定した値
 "括弧のハイライト
 set showmatch
 
+"検索結果のハイライト
+set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 "カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 
