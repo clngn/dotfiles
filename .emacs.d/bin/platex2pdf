@@ -1,7 +1,9 @@
 #!/bin/bash
 export PATH=/usr/texbin:$PATH
 export name=$1
-platex $1
-platex $1
-dvipdfmx ${name%.*}
+
+if platex $1 ; then
+    platex $1
+    dvipdfmx ${name%.*}
+fi
 
