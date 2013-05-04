@@ -568,7 +568,7 @@
 (setq tex-command "platex2pdf") ; スクリプトを使って直接pdfにコンパイル
 (setq dvi2-command "open -a Preview.app")  ; プレビュー.appでpdfを開く
 (setq bibtex-command "pbibtex")
-
+(setq YaTeX-typeset-auto-rerun nil)
 
 ;; powerline
 ;; (require 'powerline)
