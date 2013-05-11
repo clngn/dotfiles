@@ -36,3 +36,6 @@ set whichwrap=b,s,h,l,<,>,[,]
 "インクリメンタルサーチ
 "set incsearch
 
+"ファイル名の補完をbash風に
+set wildmode=list:longest
+
