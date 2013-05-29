@@ -1,5 +1,11 @@
+"256色
+set t_Co=256
+
 "行番号の表示
 "set number
+
+"タブ有効
+"set showtabline=2
 
 "ステータスラインの設定
 set laststatus=2
@@ -14,8 +20,8 @@ set listchars=tab:^_,trail:_,extends:>,precedes:<
 "シンタックスカラー
 syntax on
 "colorscheme koehler
-"colorscheme molokai
-colorscheme desert
+colorscheme molokai
+"colorscheme desert
 
 "インデント幅
 set expandtab  "インデントは半角スペース
