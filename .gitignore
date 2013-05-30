@@ -11,6 +11,7 @@
 .emacs.d/elisp
 .emacs.d/elpa
 .emacs.d/tramp
+.emacs.d/url
 
 # Vim
 .vim/.netrwhist
