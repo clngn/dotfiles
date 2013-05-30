@@ -549,13 +549,29 @@
 
 ;; php-mode
 (autoload 'php-mode "php-mode" nil t)
+;; (setq auto-mode-alist
+;;       (cons '("\\.php$" . php-mode) auto-mode-alist))
 (setq auto-mode-alist
-      (cons '("\\.php$" . php-mode) auto-mode-alist))
+      (cons '("\\.php$" . html-mode) auto-mode-alist))
+(setq php-mode-force-pear t)
 (add-hook 'php-mode-hook
           '(lambda ()
              (c-set-style "stroustrup")
              (setq c-basic-offset 4)
+             (setq tab-width 4)
              ))
+
+;; mmm-mode
+(require 'mmm-mode)
+(setq mmm-global-mode 'maybe)
+(set-face-background 'mmm-default-submode-face nil)  ; 色分けしない
+(mmm-add-mode-ext-class nil "\\.php\\'" 'html-php)
+(mmm-add-classes
+    '((html-php
+    :submode php-mode
+    :front "<\\?\\(php\\)?"
+    :back "\\?>")))
+
 
 ;; YaTeX-mode
 (setq auto-mode-alist
