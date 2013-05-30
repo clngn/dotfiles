@@ -437,52 +437,6 @@
              ))
 (require 'jinja2-mode)
 
-
-;; html-helper-mode
-;; (autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
-;; (setq auto-mode-alist
-;;   (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
-;; (setq html-helper-basic-offset 4)
-
-;; psgml-mode
-;; (autoload 'sgml-mode "psgml" "Major mode to edit SGML files." t)
-;; (autoload 'xml-mode "psgml" "Major mode to edit XML files." t)
-;; (setq auto-mode-alist
-;;   (append
-;;    '(("\\.html$" . xml-mode)
-;;      ("\\.xhtml$" . xml-mode))
-;;    auto-mode-alist))
-;; (setq sgml-catalog-files '("~/.emacs.d/sgml/xhtml1-20020801/DTD/xhtml1.cat"))
-;; (setq sgml-custom-dtd
-;;       '(
-;;         ("XHTML 1.0"
-;;          "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"
-;;                       \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">")
-;;         ))
-;; (add-hook 'sgml-mode-hook
-;;   '(lambda()
-;; ;     (sgml-indent-step 4)
-;; ))
-;; (add-hook 'xml-mode-hook
-;;   (function (lambda()
-;;     (make-face 'sgml-comment-face)
-;;     (make-face 'sgml-start-tag-face)
-;;     (make-face 'sgml-end-tag-face)
-;;     (make-face 'sgml-doctype-face)
-
-;;     (set-face-foreground 'sgml-comment-face "blue4")
-;;     (set-face-foreground 'sgml-start-tag-face "steelblue")
-;;     (set-face-foreground 'sgml-end-tag-face "steelblue")
-;;     (set-face-foreground 'sgml-doctype-face "blue4")
-
-;;     (setq sgml-set-face t)
-;;     (setq sgml-markup-faces
-;;       '((comment   . sgml-comment-face)
-;;         (start-tag . sgml-start-tag-face)
-;;         (end-tag   . sgml-end-tag-face)
-;;         (doctype   . sgml-doctype-face)))
-;;     )))
-
 ;; css-mode
 (autoload 'css-mode "css-mode" nil t)
 (setq auto-mode-alist
@@ -546,7 +500,6 @@
              (setq yas/mode-symbol 'js-mode)
              ))
 
-
 ;; php-mode
 (autoload 'php-mode "php-mode" nil t)
 ;; (setq auto-mode-alist
@@ -572,7 +525,6 @@
     :front "<\\?\\(php\\)?"
     :back "\\?>")))
 
-
 ;; YaTeX-mode
 (setq auto-mode-alist
       (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
@@ -585,118 +537,3 @@
 (setq dvi2-command "open -a Preview.app")  ; プレビュー.appでpdfを開く
 (setq bibtex-command "pbibtex")
 (setq YaTeX-typeset-auto-rerun nil)
-
-;; powerline
-;; (require 'powerline)
-;; ;; (set-scroll-bar-mode 'right)  ;; スクロールバー表示
-;; (defun arrow-right-xpm (color1 color2)
-;;   "Return an XPM right arrow string representing."
-;;   (format "/* XPM */
-;; static char * arrow_right[] = {
-;; \"12 18 2 1\",
-;; \".     c %s\",
-;; \"      c %s\",
-;; \".           \",
-;; \"..          \",
-;; \"...         \",
-;; \"....        \",
-;; \".....       \",
-;; \"......      \",
-;; \".......     \",
-;; \"........    \",
-;; \".........   \",
-;; \".........   \",
-;; \"........    \",
-;; \".......     \",
-;; \"......      \",
-;; \".....       \",
-;; \"....        \",
-;; \"...         \",
-;; \"..          \",
-;; \".           \"};"  color1 color2))
-
-;; (defun arrow-left-xpm (color1 color2)
-;;   "Return an XPM right arrow string representing."
-;;   (format "/* XPM */
-;; static char * arrow_right[] = {
-;; \"12 18 2 1\",
-;; \".     c %s\",
-;; \"      c %s\",
-;; \"           .\",
-;; \"          ..\",
-;; \"         ...\",
-;; \"        ....\",
-;; \"       .....\",
-;; \"      ......\",
-;; \"     .......\",
-;; \"    ........\",
-;; \"   .........\",
-;; \"   .........\",
-;; \"    ........\",
-;; \"     .......\",
-;; \"      ......\",
-;; \"       .....\",
-;; \"        ....\",
-;; \"         ...\",
-;; \"          ..\",
-;; \"           .\"};"  color2 color1))
-
-;; (defconst color1 "#4f99c0")
-;; (defconst color2 "#4185b4")
-;; (defconst color3 "#2a729a")
-;; (defconst color4 "#334d66")
-
-;; (defvar arrow-right-1 (create-image (arrow-right-xpm color1 color2) 'xpm t :ascent 'center))
-;; (defvar arrow-right-2 (create-image (arrow-right-xpm color2 color3) 'xpm t :ascent 'center))
-;; (defvar arrow-right-3 (create-image (arrow-right-xpm color3 "None") 'xpm t :ascent 'center))
-;; (defvar arrow-left-1  (create-image (arrow-left-xpm color2 color1) 'xpm t :ascent 'center))
-;; (defvar arrow-left-2  (create-image (arrow-left-xpm color3 color2) 'xpm t :ascent 'center))
-;; (defvar arrow-left-3  (create-image (arrow-left-xpm "None" color3) 'xpm t :ascent 'center))
-
-;; (make-face 'mode-line-color-1)
-;; (set-face-attribute 'mode-line-color-1 nil
-;;                     :foreground "#fff"
-;;                     :background color1)
-
-;; (make-face 'mode-line-color-2)
-;; (set-face-attribute 'mode-line-color-2 nil
-;;                     :foreground "#fff"
-;;                     :background color2)
-
-;; (make-face 'mode-line-color-3)
-;; (set-face-attribute 'mode-line-color-3 nil
-;;                     :foreground "#fff"
-;;                     :background color3)
-
-;; (set-face-attribute 'mode-line nil
-;;                     :foreground "#fff"
-;;                     :background color4
-;;                     :box nil)
-;; (set-face-attribute 'mode-line-inactive nil
-;;                     :foreground "#fff"
-;;                     :background "gray10"
-;;                     :box nil)
-
-;; (setq-default mode-line-format
-;;               (list
-;;                '(:eval (concat (propertize " %Z%* " 'face 'mode-line-color-1)
-;;                                (propertize " " 'display arrow-right-1)))
-;;                '(:eval (concat (propertize " %b " 'face 'mode-line-color-2)
-;;                                (propertize " " 'display arrow-right-2)))
-;;                '(:eval (concat (propertize " %m" 'face 'mode-line-color-3)
-;;                                (powerline-minor-modes 'left color3)
-;;                                (propertize " " 'face 'mode-line-color-3)
-;;                                (propertize " " 'display arrow-right-3)))
-
-;;                '(vc-mode vc-mode)
-
-;;                ;; Justify right by filling with spaces to right fringe - 16
-;;                ;; (16 should be computed rahter than hardcoded)
-;;                '(:eval (propertize " " 'display '((space :align-to (- right-fringe 16)))))
-
-;;                '(:eval (concat (propertize " " 'display arrow-left-3)
-;;                                (propertize " %p " 'face 'mode-line-color-3)))
-;;                '(:eval (concat (propertize " " 'display arrow-left-2)
-;;                                (propertize "%4l:%2c  " 'face 'mode-line-color-2)))
-
-;;                ))
