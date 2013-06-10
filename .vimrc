@@ -1,3 +1,6 @@
+"vi互換をオフ
+set nocompatible
+
 "256色
 set t_Co=256
 
@@ -6,6 +9,9 @@ set t_Co=256
 
 "タブ有効
 "set showtabline=2
+
+"バックスペースを有効
+set backspace=2
 
 "ステータスラインの設定
 set laststatus=2
