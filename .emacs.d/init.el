@@ -470,7 +470,7 @@
              ))
 
 ;; js2-mode
-(autoload 'js2-mode "js2" nil t)
+(autoload 'js2-mode "js2-mode" nil t)
 (setq auto-mode-alist
       (cons '("\\.js$" . js2-mode) auto-mode-alist))
 (add-hook 'js2-mode-hook
