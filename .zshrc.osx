@@ -7,7 +7,7 @@ alias o='open .'
 alias safari='open -a Safari'
 alias chrome='open -a Google\ Chrome'
 alias emacs='open -a Emacs'
-alias emacsnw='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias emacsnw='TERM="xterm-256color" /Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias cot='open -a CotEditor'
 alias prev='open -a Preview'
 
