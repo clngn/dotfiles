@@ -39,8 +39,9 @@
 
 ;; IMEの状態をモードラインに表示
 ;; 日本語設定の後に
+;; *scratch*で(mac-get-current-input-source)をC-jすればわかる
 (setq default-input-method "MacOSX")
-(mac-set-input-method-parameter "com.justsystems.inputmethod.atok25.Japanese" `title "[ON]")  ; ATOK2012
+(mac-set-input-method-parameter "com.apple.inputmethod.Kotoeri.Japanese" `title "[ON]")  ; ことえり
 
 
 ;-------------------------------------------------------------------------------
