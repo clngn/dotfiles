@@ -5,43 +5,52 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8-unix)
 
-
-;-------------------------------------------------------------------------------
-; Mac設定
-;-------------------------------------------------------------------------------
-
 ;; フォントの設定
 (when (and (window-system) (>= emacs-major-version 23))
   ;; asciiフォントの設定
   (set-face-attribute 'default nil
                       :family "monaco"
                       :height 140)
-  ;; 日本語フォントの設定
+  ;; ;; 日本語フォントの設定
+  ;; (set-fontset-font
+  ;;  nil 'japanese-jisx0208
+  ;;  (font-spec :family "MigMix 1M"))
+  ;; ;; フォントの横幅を調整
+  ;; (setq face-font-rescale-alist
+  ;;       '(("^-apple-hiragino.*" . 1.2)
+  ;;         (".*osaka-bold.*" . 1.2)
+  ;;         (".*osaka-medium.*" . 1.2)
+  ;;         (".*courier-bold-.*-mac-roman" . 1.0)
+  ;;         (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
+  ;;         (".*monaco-bold-.*-mac-roman" . 0.9)
+  ;;         ("-cdac$" . 1.3)
+  ;;         (".*MigMix.*" . 1.2))))
+  ;; プライマリーに日本語フォントを指定するとフレーム幅が2倍になるバグ
+  ;; (set-face-attribute 'default nil
+  ;;                     :family "Migu 1M"
+  ;;                     :height 180)
   (set-fontset-font
    nil 'japanese-jisx0208
-   (font-spec :family "MigMix 1M"))
-  ;; フォントの横幅を調整
-  (setq face-font-rescale-alist
-        '(("^-apple-hiragino.*" . 1.2)
-          (".*osaka-bold.*" . 1.2)
-          (".*osaka-medium.*" . 1.2)
-          (".*courier-bold-.*-mac-roman" . 1.0)
-          (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
-          (".*monaco-bold-.*-mac-roman" . 0.9)
-          ("-cdac$" . 1.3)
-          (".*MigMix.*" . 1.2))))
+   (font-spec :family "Migu 1M")))
 
-;; optionキーをmeta
-(setq mac-option-modifier 'meta)
 
-;; commandキーをsuper
-(setq mac-command-modifier 'super)
+;-------------------------------------------------------------------------------
+; Mac設定
+;-------------------------------------------------------------------------------
 
-;; IMEの状態をモードラインに表示
-;; 日本語設定の後に
-;; *scratch*で(mac-get-current-input-source)をC-jすればわかる
-(setq default-input-method "MacOSX")
-(mac-set-input-method-parameter "com.apple.inputmethod.Kotoeri.Japanese" `title "[ON]")  ; ことえり
+(when (eq system-type 'darwin)
+  ;; optionキーをmeta
+  (setq mac-option-modifier 'meta)
+
+  ;; commandキーをsuper
+  (setq mac-command-modifier 'super)
+
+  ;; IMEの状態をモードラインに表示
+  ;; 日本語設定の後に
+  ;; *scratch*で(mac-get-current-input-source)をC-jすればわかる
+  (setq default-input-method "MacOSX")
+  ; ことえり
+  (mac-set-input-method-parameter "com.apple.inputmethod.Kotoeri.Japanese" `title "[あ]"))
 
 
 ;-------------------------------------------------------------------------------
