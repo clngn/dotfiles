@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: console.log
+# key: log
+# contributor: clngn
+# --
+console.log($1);
+$0
