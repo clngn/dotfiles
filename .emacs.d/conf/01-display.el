@@ -1,3 +1,8 @@
+;; メニューバーの表示切り替え
+(if (window-system)
+    (menu-bar-mode t)
+  (menu-bar-mode 0))
+
 ;; スクロールを1行ずつに
 (setq scroll-conservatively 35)
 (setq scroll-margin 0)
@@ -48,15 +53,6 @@
    ((t (:foreground "yellow" :weight bold))))
  '(trailing-whitespace
    ((t (:background nil :foreground "gray32" :underline t))))
- ;; elscreen
- '(elscreen-tab-background-face
-   ((t (:background "gray10"))))
- '(elscreen-tab-control-face
-   ((t (:background "gray10" :foreground "gray60"))))
- '(elscreen-tab-current-screen-face
-   ((t (:background "gray75" :foreground "black"))))
- '(elscreen-tab-other-screen-face
-   ((t (:background "gray30" :foreground "gray80"))))
  )
 
 ;; mode-line

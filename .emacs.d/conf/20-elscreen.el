@@ -9,3 +9,14 @@
   (global-set-key (kbd "C-<tab>") 'elscreen-next)        ; タブ移動
   (global-set-key (kbd "C-S-<tab>") 'elscreen-previous)  ; タブ移動
   )
+
+(custom-set-faces
+ '(elscreen-tab-background-face
+   ((t (:background "gray10"))))
+ '(elscreen-tab-control-face
+   ((t (:background "gray10" :foreground "gray60"))))
+ '(elscreen-tab-current-screen-face
+   ((t (:background "gray75" :foreground "black"))))
+ '(elscreen-tab-other-screen-face
+   ((t (:background "gray30" :foreground "gray80"))))
+)

@@ -1,17 +1,12 @@
+;; ツールバーを表示しない
+(tool-bar-mode 0)
+
 ;; ファイルをD&Dで開く
 (define-key global-map [ns-drag-file] 'ns-find-file)
 (setq ns-pop-up-frames nil)
 
 ;; タイトルバーに今開いてるファイル名を表示
 (setq frame-title-format "%f - emacs")
-
-;; ツールバーを表示しない
-(tool-bar-mode 0)
-
-;; メニューバーの表示切り替え
-(if (window-system)
-    (menu-bar-mode t)
-  (menu-bar-mode 0))
 
 ;; スクロールバーを右側に表示
 ;; (set-scroll-bar-mode 'right)
