@@ -25,16 +25,16 @@
 (column-number-mode t)
 
 ;; 不可視文字の表示
-(when (>= emacs-major-version 23)
-  (require 'whitespace)
-  (setq whitespace-style
-        '(face tabs tab-mark spaces space-mark))
-  (setq whitespace-space-regexp "\\( +\\|\u3000+\\)")
-  (setq whitespace-display-mappings
-        '((space-mark ?\u3000 [?\u25a1])
-          (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
-  (global-whitespace-mode 1)
-  )
+;; (when (>= emacs-major-version 23)
+;;   (require 'whitespace)
+;;   (setq whitespace-style
+;;         '(face tabs tab-mark spaces space-mark))
+;;   (setq whitespace-space-regexp "\\( +\\|\u3000+\\)")
+;;   (setq whitespace-display-mappings
+;;         '((space-mark ?\u3000 [?\u25a1])
+;;           (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
+;;   (global-whitespace-mode 1)
+;;   )
 
 ;; 行末スペースの表示
 (setq-default show-trailing-whitespace t)
