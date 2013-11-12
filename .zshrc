@@ -24,7 +24,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # zsh incremental completion
-[ -d $HOME/dotfiles/.zsh/plugin ] && source $HOME/dotfiles/.zsh/plugin/incr*.zsh
+#[ -d $HOME/dotfiles/.zsh/plugin ] && source $HOME/dotfiles/.zsh/plugin/incr*.zsh
 
 # alias
 alias l='ls'
