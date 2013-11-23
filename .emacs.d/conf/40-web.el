@@ -8,8 +8,8 @@
 ;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.php\\" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
 
 (defun web-mode-hook ()
   (setq web-mode-markup-indent-offset 4)  ; HTML offset indentation
@@ -57,8 +57,8 @@
 ;;;;
 ;; css-mode
 (autoload 'css-mode "css-mode" nil t)
-;; (setq auto-mode-alist
-;;       (cons '("\\.css\\'" . css-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("\\.css\\'" . css-mode) auto-mode-alist))
 (add-hook 'css-mode-hook
           '(lambda ()
              (define-key css-mode-map "{" 'css-electric-pair)
@@ -91,8 +91,8 @@
 ;;;;
 ;; js2-mode
 (autoload 'js2-mode "js2-mode" nil t)
-;; (setq auto-mode-alist
-;;       (cons '("\\.js$" . js2-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("\\.js$" . js2-mode) auto-mode-alist))
 (add-hook 'js2-mode-hook
           '(lambda ()
              (setq js2-basic-offset 4)
@@ -134,10 +134,8 @@
 ;;;;
 ;; php-mode
 (autoload 'php-mode "php-mode" nil t)
-;; (setq auto-mode-alist
-;;       (cons '("\\.php$" . php-mode) auto-mode-alist))
 (setq auto-mode-alist
-      (cons '("\\.php$" . html-mode) auto-mode-alist))
+      (cons '("\\.php$" . php-mode) auto-mode-alist))
 (setq php-mode-force-pear t)
 (add-hook 'php-mode-hook
           '(lambda ()
