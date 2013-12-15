@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: print_error_log
+# key: log
+# contributor: clngn
+# --
+error_log(print_r($1, true), 0);
+$0
