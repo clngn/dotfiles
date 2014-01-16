@@ -120,17 +120,6 @@
              (setq yas/mode-symbol 'js-mode)
              ))
 
-
-;;;;
-;; coffee-mode
-(autoload 'coffee-mode "coffee-mode" nil t)
-(setq auto-mode-alist
-      (cons '("\\.coffee$" . coffee-mode) auto-mode-alist))
-(add-hook 'coffee-mode-hook
-          '(lambda ()
-             ))
-
-
 ;;;;
 ;; php-mode
 (autoload 'php-mode "php-mode" nil t)
@@ -143,8 +132,3 @@
              (setq c-basic-offset 4)
              (setq tab-width 4)
              ))
-
-
-;;;;
-;; jinja2-mode
-(require 'jinja2-mode)
