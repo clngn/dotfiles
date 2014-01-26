@@ -1,6 +1,6 @@
 ;; auto-complete
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/auto-complete/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 (global-auto-complete-mode t)
 (ac-config-default)
 ;; 補完時にTABをRETの挙動に
