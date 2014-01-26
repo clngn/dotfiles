@@ -54,4 +54,3 @@ linux*)
   [ -f ~/dotfiles/.zshrc.linux ] && source ~/dotfiles/.zshrc.linux
   ;;
 esac
-
