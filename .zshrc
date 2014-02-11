@@ -16,6 +16,9 @@ SAVEHIST=10000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
+# 改行のない行を出力する
+unsetopt promptcr
+
 # Completion configuration
 autoload -U compinit
 compinit
