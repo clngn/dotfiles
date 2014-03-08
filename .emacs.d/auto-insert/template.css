@@ -3,8 +3,10 @@
 
 body {
     color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 p {
     line-height: 1.4;
 }
+
