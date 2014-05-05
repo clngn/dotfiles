@@ -131,4 +131,5 @@
              (c-set-style "stroustrup")
              (setq c-basic-offset 4)
              (setq tab-width 4)
+             (c-set-offset 'arglist-close' 0)  ; 引数リストの閉じ括弧の設定
              ))
