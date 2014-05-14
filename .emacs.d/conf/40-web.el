@@ -8,8 +8,9 @@
 ;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.ctp$" . web-mode))
 
 (defun web-mode-hook ()
   (setq web-mode-markup-indent-offset 4)  ; HTML offset indentation
@@ -19,8 +20,13 @@
   (setq web-mode-style-padding 4)  ; For <style> parts padding
   (setq web-mode-script-padding 4)  ; For <script> parts padding
 
-  (setq web-mode-comment-style 2))
-(add-hook 'web-mode-hook 'web-mode-hook)
+  (setq web-mode-comment-style 2)
+
+  (setq web-mode-engines-alist
+        '(("php"    . "\\.ctp\\'"))
+        )
+
+  (add-hook 'web-mode-hook 'web-mode-hook))
 
 (add-hook 'web-mode-hook 'whitespace-turn-off)
 
@@ -48,6 +54,8 @@
 
 ;;;;
 ;; html-mode
+(add-to-list 'auto-mode-alist '("\\.html$" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.ctp$" . html-mode))
 (add-hook 'html-mode-hook
           '(lambda ()
              (setq sgml-basic-offset 4)
