@@ -12,11 +12,11 @@
 (add-to-load-path "elisp" "elpa")
 
 ;; package
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+(when (require 'package nil t)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+  (package-initialize))
 
 ;; init-loader
-(require 'init-loader)
-(init-loader-load "~/.emacs.d/conf")
+(when (require 'init-loader nil t)
+  (init-loader-load "~/.emacs.d/conf"))
