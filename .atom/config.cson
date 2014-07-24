@@ -6,7 +6,7 @@
   'lineHeight': 1.4
   'showInvisibles': true
   'invisibles':
-    'tab': '-'
+    'tab': '▸'
     'cr': ''
     'eol': ''
     'space': ''
