@@ -4,6 +4,7 @@
   'tabLength': 4
   'softWrap': true
   'lineHeight': 1.4
+  'showIndentGuide': true
   'showInvisibles': true
   'invisibles':
     'tab': '▸'
