@@ -7,7 +7,7 @@
   'showIndentGuide': true
   'showInvisibles': true
   'invisibles':
-    'tab': '▸'
+    'tab': '>'
     'cr': ''
     'eol': ''
     'space': ''
