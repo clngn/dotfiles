@@ -8,9 +8,9 @@
   'showInvisibles': true
   'invisibles':
     'tab': '>'
-    'cr': ''
-    'eol': ''
-    'space': ''
+    'cr': ' '
+    'eol': ' '
+    'space': ' '
 'core':
   'themes': [
     'atom-dark-ui'
