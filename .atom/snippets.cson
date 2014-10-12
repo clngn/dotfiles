@@ -14,8 +14,27 @@
 #   'body': 'console.log $1'
 #
 
+## Python
+'.source.python':
+    'python template':
+        'prefix': 'template'
+        'body': '# -*- coding: utf-8 -*-\n\nif __name__ == \'__main__\':\n'
+
+## HTML
+'.source.html':
+    'html template':
+        'prefix': 'template'
+        'body': '<!DOCTYPE html>\n<html lang="ja">\n<head>\n    <meta charset="utf-8">\n    <title></title>\n    <link rel="stylesheet" href="">\n    <script src=""></script>\n</head>\n<body>\n\n</body>\n</html>\n'
+
+## CSS
+'.source.css':
+    'css template':
+        'prefix': 'template'
+        'body': '@charset "utf-8";\n/* @import "reset.css"; */\n\nbody {\n    color: #333;\n    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;\n
+}\n\np {\n    line-height: 1.4;\n}\n'
+
 ## PHP
 '.source.php':
     'pre dump':
         'prefix': 'dump'
-        'body': 'echo \'<pre>\';\nvar_dump($1);\necho \'</pre>\';'
+        'body': 'echo \'<pre>\';\nvar_dump($1);\necho \'</pre>\';\n'
