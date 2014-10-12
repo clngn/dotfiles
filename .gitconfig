@@ -1,3 +1,6 @@
+[user]
+    name = clngn
+
 [core]
     editor = vim
     excludesfile = ~/.gitignore
