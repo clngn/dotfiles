@@ -26,3 +26,5 @@
 'metrics': {}
 'autocomplete-plus': {}
 'whitespace': {}
+'atom-jshint':
+  'hintOnModify': false
