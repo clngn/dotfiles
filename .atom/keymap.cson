@@ -16,6 +16,11 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
+
+'body':
+    'ctrl-v': 'core:page-down'
+    'alt-v': 'core:page-up'
+
 '.editor:not(.mini)':
     'alt-cmd-l': 'editor:auto-insert'
 
