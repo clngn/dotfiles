@@ -18,6 +18,11 @@
 #
 
 'body':
+    'cmd-+': 'unset!'
+    'cmd--': 'unset!'
+    'cmd-0': 'unset!'
+    'cmd-=': 'unset!'
+    'cmd-_': 'unset!'
     'ctrl-v': 'core:page-down'
     'alt-v': 'core:page-up'
 
