@@ -1,17 +1,16 @@
 'global':
   'editor':
-    'fontSize': 13
-    'fontFamily': 'monaco'
-    'tabLength': 4
+    'fontFamily': 'Ricty'
     'softWrap': true
     'lineHeight': 1.4
-    'showIndentGuide': true
     'showInvisibles': true
     'invisibles':
       'tab': '>'
       'cr': ' '
       'eol': ' '
       'space': ' '
+    'tabLength': 4
+    'showIndentGuide': true
   'core':
     'disabledPackages': [
       'metrics'
@@ -21,3 +20,14 @@
     'showOnStartup': false
   'atom-jshint':
     'hintOnModify': false
+  'syntax-settings':
+    'source':
+      'ruby':
+        'editorSettings':
+          'tabLength': 2
+        'rails':
+          'editorSettings':
+            'tabLength': 2
+      'coffee':
+        'editorSettings':
+          'tabLength': 2
