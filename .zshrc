@@ -37,6 +37,11 @@ alias grep='grep --color'
 # python
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
+# pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+[ -d $PYENV_ROOT ] && eval "$(pyenv init -)"
+
 # rbenv
 [ -f $HOME/.rbenv/shims ] && eval "$(rbenv init -)"
 export PATH=$HOME/.rbenv/shims:$PATH
