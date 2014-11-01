@@ -18,18 +18,18 @@
 #
 
 'body':
-    'cmd-+': 'unset!'
-    'cmd--': 'unset!'
-    'cmd-0': 'unset!'
-    'cmd-=': 'unset!'
-    'cmd-_': 'unset!'
-    'ctrl-v': 'core:page-down'
-    'alt-v': 'core:page-up'
+  'cmd-+': 'unset!'
+  'cmd--': 'unset!'
+  'cmd-0': 'unset!'
+  'cmd-=': 'unset!'
+  'cmd-_': 'unset!'
+  'ctrl-v': 'core:page-down'
+  'alt-v': 'core:page-up'
 
 '.editor:not(.mini)':
-    'alt-cmd-l': 'editor:auto-insert'
+  'alt-cmd-l': 'editor:auto-insert'
 
 '.autocomplete-plus input.hidden-input':
-    'enter': 'autocomplete-plus:confirm'
-    'ctrl-p': 'autocomplete-plus:select-previous'
-    'ctrl-n': 'autocomplete-plus:select-next'
+  'enter': 'autocomplete-plus:confirm'
+  'ctrl-p': 'autocomplete-plus:select-previous'
+  'ctrl-n': 'autocomplete-plus:select-next'
