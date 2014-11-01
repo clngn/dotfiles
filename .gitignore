@@ -3,6 +3,10 @@
 
 # Python
 *.pyc
+.python-version
+
+# Ruby
+.ruby-version
 
 #Emacs
 .emacs.d/ac-comphist.dat
