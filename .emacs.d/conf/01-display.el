@@ -23,6 +23,7 @@
 ;; 行列数表示
 (line-number-mode t)
 (column-number-mode t)
+(global-linum-mode t)
 
 ;; 不可視文字の表示
 ;; (when (>= emacs-major-version 23)
