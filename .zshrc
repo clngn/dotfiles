@@ -52,6 +52,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # julius
 export PATH=$HOME/work/julius/build/bin:$PATH
 
+# Heroku Toolbelt
+export PATH=/usr/local/heroku/bin:$PATH
+
 case "${OSTYPE}" in
 # Mac
 darwin*)
@@ -62,3 +65,4 @@ linux*)
   [ -f $HOME/dotfiles/.zshrc.linux ] && source $HOME/dotfiles/.zshrc.linux
   ;;
 esac
+

@@ -1,9 +1,10 @@
-my config files.
+# my config files.
 
-git
-zsh
-tmux
-emacs
-vim
-atom
-python
+```
+# setup
+$ sh setup.sh
+
+# node_module global install
+$ sh npm_global
+```
+
