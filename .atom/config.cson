@@ -31,3 +31,11 @@
       'coffee':
         'editorSettings':
           'tabLength': 2
+      'js':
+        'editorSettings':
+          'tabLength': 2
+    'text':
+      'html':
+        'basic':
+          'editorSettings':
+            'tabLength': 2
