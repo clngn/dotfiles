@@ -38,3 +38,6 @@
   'pre dump':
     'prefix': 'dump'
     'body': 'echo \'<pre>\';\nvar_dump($1);\necho \'</pre>\';\n'
+  'error log':
+    'prefix': 'log'
+    'body': 'error_log(print_r($1, true), 0);\n'
