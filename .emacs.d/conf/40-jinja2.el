@@ -1,3 +1,4 @@
 ;;;;
 ;; jinja2-mode
-(require 'jinja2-mode)
+(when (require 'jinja2-mode nil t)
+)
