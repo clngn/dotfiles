@@ -1,16 +1,16 @@
-'global':
+'*':
   'editor':
     'fontFamily': 'Ricty'
-    'softWrap': true
     'lineHeight': 1.4
     'showInvisibles': true
+    'showIndentGuide': true
+    'tabLength': 4
+    'softWrap': true
     'invisibles':
-      'tab': '>'
-      'cr': ' '
       'eol': ' '
       'space': ' '
-    'tabLength': 4
-    'showIndentGuide': true
+      'tab': '>'
+      'cr': ' '
   'core':
     'disabledPackages': [
       'metrics'
@@ -39,4 +39,5 @@
         'basic':
           'editorSettings':
             'tabLength': 2
-  'autocomplete-plus': {}
+  'autocomplete-plus':
+    'navigateCompletions': 'ctrl-p,ctrl-n'
