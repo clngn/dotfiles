@@ -26,6 +26,10 @@
   'ctrl-v': 'core:page-down'
   'alt-v': 'core:page-up'
 
+'.tree-view':
+  'alt-h': 'tree-view:recursive-collapse-directory'
+  'alt-l': 'tree-view:recursive-expand-directory'
+
 '.editor:not(.mini)':
   'alt-cmd-l': 'editor:auto-insert'
 
