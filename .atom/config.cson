@@ -1,43 +1,43 @@
-'*':
-  'editor':
-    'fontFamily': 'Ricty'
-    'lineHeight': 1.4
-    'showInvisibles': true
-    'showIndentGuide': true
-    'tabLength': 4
-    'softWrap': true
-    'invisibles':
-      'eol': ' '
-      'space': ' '
-      'tab': '>'
-      'cr': ' '
-  'core':
-    'disabledPackages': [
-      'metrics'
-      'exception-reporting'
+"*":
+  editor:
+    fontFamily: "Ricty"
+    lineHeight: 1.4
+    showInvisibles: true
+    showIndentGuide: true
+    tabLength: 4
+    softWrap: true
+    invisibles:
+      eol: " "
+      space: " "
+      tab: ">"
+      cr: " "
+  core:
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
     ]
-  'welcome':
-    'showOnStartup': false
-  'atom-jshint':
-    'hintOnModify': false
-  'syntax-settings':
-    'source':
-      'ruby':
-        'editorSettings':
-          'tabLength': 2
-        'rails':
-          'editorSettings':
-            'tabLength': 2
-      'coffee':
-        'editorSettings':
-          'tabLength': 2
-      'js':
-        'editorSettings':
-          'tabLength': 2
-    'text':
-      'html':
-        'basic':
-          'editorSettings':
-            'tabLength': 2
-  'autocomplete-plus':
-    'navigateCompletions': 'ctrl-p,ctrl-n'
+  welcome:
+    showOnStartup: false
+  "atom-jshint":
+    hintOnModify: false
+  "syntax-settings":
+    source:
+      ruby:
+        editorSettings:
+          tabLength: 2
+        rails:
+          editorSettings:
+            tabLength: 2
+      coffee:
+        editorSettings:
+          tabLength: 2
+      js:
+        editorSettings:
+          tabLength: 2
+    text:
+      html:
+        basic:
+          editorSettings:
+            tabLength: 2
+  "autocomplete-plus":
+    navigateCompletions: "ctrl-p,ctrl-n"
