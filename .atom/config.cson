@@ -4,7 +4,6 @@
     lineHeight: 1.4
     showInvisibles: true
     showIndentGuide: true
-    tabLength: 4
     softWrap: true
     invisibles:
       eol: " "
@@ -22,6 +21,9 @@
     hintOnModify: false
   "syntax-settings":
     source:
+      python:
+        editorSettings:
+          tabLength: 4
       ruby:
         editorSettings:
           tabLength: 2
