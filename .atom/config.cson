@@ -43,3 +43,4 @@
             tabLength: 2
   "autocomplete-plus":
     navigateCompletions: "ctrl-p,ctrl-n"
+    confirmCompletion: "tab and enter"
