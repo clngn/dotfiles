@@ -17,8 +17,6 @@
     ]
   welcome:
     showOnStartup: false
-  "atom-jshint":
-    hintOnModify: false
   "syntax-settings":
     source:
       python:
