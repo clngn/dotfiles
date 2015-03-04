@@ -39,6 +39,9 @@
         basic:
           editorSettings:
             tabLength: 2
+        php:
+          editorSettings:
+            tabLength: 4
   "autocomplete-plus":
     navigateCompletions: "ctrl-p,ctrl-n"
     confirmCompletion: "tab and enter"
