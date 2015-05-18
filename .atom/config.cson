@@ -21,31 +21,12 @@
     ]
   welcome:
     showOnStartup: false
-  "syntax-settings":
-    source:
-      python:
-        editorSettings:
-          tabLength: 4
-      ruby:
-        editorSettings:
-          tabLength: 2
-        rails:
-          editorSettings:
-            tabLength: 2
-      coffee:
-        editorSettings:
-          tabLength: 2
-      js:
-        editorSettings:
-          tabLength: 2
-    text:
-      html:
-        basic:
-          editorSettings:
-            tabLength: 2
-        php:
-          editorSettings:
-            tabLength: 4
   "autocomplete-plus":
     navigateCompletions: "ctrl-p,ctrl-n"
     confirmCompletion: "tab and enter"
+".html.php.text":
+  editor:
+    tabLength: 4
+".python.regexp.source":
+  editor:
+    tabLength: 4
