@@ -21,12 +21,23 @@
     ]
   welcome:
     showOnStartup: false
-  "autocomplete-plus":
-    navigateCompletions: "ctrl-p,ctrl-n"
-    confirmCompletion: "tab and enter"
-".html.php.text":
+  linter:
+    {}
+  "linter-csslint":
+    {}
+  "linter-jshint":
+    {}
+  "linter-less":
+    {}
+  "linter-tslint":
+    {}
+  react:
+    {}
+  "linter-jsxhint":
+    {}
+".python.regexp.source":
   editor:
     tabLength: 4
-".python.regexp.source":
+".html.php.text":
   editor:
     tabLength: 4
