@@ -21,20 +21,15 @@
     ]
   welcome:
     showOnStartup: false
-  linter:
-    {}
-  "linter-csslint":
-    {}
-  "linter-jshint":
-    {}
-  "linter-less":
-    {}
-  "linter-tslint":
-    {}
-  react:
-    {}
-  "linter-jsxhint":
-    {}
+  linter: {}
+  "linter-csslint": {}
+  "linter-jshint": {}
+  "linter-less": {}
+  "linter-tslint": {}
+  react: {}
+  "linter-jsxhint": {}
+  "atom-typescript": {}
+  "tree-view": {}
 ".python.regexp.source":
   editor:
     tabLength: 4

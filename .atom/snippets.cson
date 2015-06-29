@@ -62,6 +62,21 @@
   'jQuery onload':
     'prefix': 'jq_onload'
     'body': '$(function() {\n$0\n});\n'
+  'jQuery ajax':
+    'prefix': '$.ajax'
+    'body': '''
+      $.ajax({
+        type: '${1:POST}',
+        url: '$2',
+        data: ${3:data},
+        contentType: '${4:application/json}',
+        success: function(msg) {
+        },
+        error: function(msg) {
+        }
+      });
+      $0
+    '''
   'doc param':
     'prefix': '@param'
     'body': '@param \{${1:object}\} $2 $3'
