@@ -14,6 +14,7 @@
     disabledPackages: [
       "metrics"
       "exception-reporting"
+      "linter-jshint"
     ]
     themes: [
       "atom-dark-ui"
@@ -30,6 +31,8 @@
   "linter-jsxhint": {}
   "atom-typescript": {}
   "tree-view": {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
 ".python.regexp.source":
   editor:
     tabLength: 4
