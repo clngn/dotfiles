@@ -79,7 +79,7 @@
     '''
   'doc param':
     'prefix': '@param'
-    'body': '@param \{${1:object}\} $2 $3'
+    'body': '@param \{${1:type}\} ${2:name} ${3:detail}'
 
 ## PHP
 '.source.php':
@@ -95,4 +95,4 @@
     'body': 'error_log(print_r($1, true), 0);\n'
   'doc param':
     'prefix': '@param'
-    'body': '@param ${1:array} \$$2 $3'
+    'body': '@param ${1:type} \$${2:name} ${3:detail}'
