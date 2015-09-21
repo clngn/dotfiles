@@ -33,6 +33,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias l='ls'
 alias ll='ls -ahl'
 alias grep='grep --color'
+alias diff='diff -u'
 
 # python
 export PYTHONSTARTUP=$HOME/.pythonrc.py
