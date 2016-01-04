@@ -47,6 +47,10 @@ export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 [ -f $HOME/.rbenv/shims ] && eval "$(rbenv init -)"
 export PATH=$HOME/.rbenv/shims:$PATH
 
+# scala
+export SCALA_HOME=/usr/local/share/scala
+export PATH=$SCALA_HOME/bin:$PATH
+
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
