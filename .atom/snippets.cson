@@ -60,7 +60,7 @@
 ## JavaScript
 '.source.js':
   'jQuery onload':
-    'prefix': 'jq_onload'
+    'prefix': '$func'
     'body': '$(function() {\n$0\n});\n'
   'jQuery ajax':
     'prefix': '$.ajax'
@@ -80,6 +80,9 @@
   'doc param':
     'prefix': '@param'
     'body': '@param \{${1:type}\} ${2:name} ${3:detail}'
+  'arrow function':
+    'prefix': '()'
+    'body': '() => {$0}'
 
 ## PHP
 '.source.php':
