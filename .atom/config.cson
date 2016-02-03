@@ -1,15 +1,5 @@
 "*":
-  editor:
-    fontFamily: "Ricty"
-    lineHeight: 1.4
-    showInvisibles: true
-    showIndentGuide: true
-    softWrap: true
-    invisibles:
-      eol: " "
-      space: " "
-      tab: ">"
-      cr: " "
+  "atom-typescript": {}
   core:
     disabledPackages: [
       "metrics"
@@ -20,22 +10,35 @@
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
-  welcome:
-    showOnStartup: false
+  editor:
+    fontFamily: "Ricty"
+    invisibles:
+      cr: " "
+      eol: " "
+      space: " "
+      tab: ">"
+    lineHeight: 1.4
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
   linter: {}
   "linter-csslint": {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
   "linter-jshint": {}
+  "linter-jsxhint": {}
   "linter-less": {}
   "linter-tslint": {}
   react: {}
-  "linter-jsxhint": {}
-  "atom-typescript": {}
   "tree-view": {}
-  "linter-eslint":
-    disableWhenNoEslintrcFileInPath: true
-".python.regexp.source":
+  welcome:
+    showOnStartup: false
+".css.source":
   editor:
     tabLength: 4
 ".html.php.text":
+  editor:
+    tabLength: 4
+".python.regexp.source":
   editor:
     tabLength: 4
