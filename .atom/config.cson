@@ -33,12 +33,6 @@
   "tree-view": {}
   welcome:
     showOnStartup: false
-".css.source":
-  editor:
-    tabLength: 4
 ".html.php.text":
-  editor:
-    tabLength: 4
-".python.regexp.source":
   editor:
     tabLength: 4

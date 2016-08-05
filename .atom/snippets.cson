@@ -21,7 +21,7 @@
     'body': '# -*- coding: utf-8 -*-\n\nif __name__ == \'__main__\':\n'
 
 ## HTML
-'.text.html':
+'.text.html.basic':
   'html template':
     'prefix': 'template'
     'body': '''
@@ -78,15 +78,34 @@
       });
       $0
     '''
-  'doc param':
-    'prefix': '@param'
-    'body': '@param \{${1:type}\} ${2:name} ${3:detail}'
   'arrow function':
     'prefix': '()'
     'body': '() => {$0}'
+  'DOMContentLoaded EventListener':
+    'prefix': 'dom'
+    'body': '''
+      document.addEventListener('DOMContentLoaded', (event) => {
+        $0
+      });
+    '''
+  'doc param':
+    'prefix': '@param'
+    'body': '@param \{${1:type}\} ${2:name} ${3:detail}'
+  'mocha bdd-describe':
+    'prefix': 'describe'
+    'body': '''
+      describe('$1', () => {
+      });
+    '''
+  'mocha bdd-it':
+    'prefix': 'it'
+    'body': '''
+      it('$1', () => {
+      });
+    '''
 
 ## PHP
-'.source.php':
+'.text.html.php':
   'pre dump':
     'prefix': 'predump'
     'body': '''
@@ -100,3 +119,21 @@
   'doc param':
     'prefix': '@param'
     'body': '@param ${1:type} \$${2:name} ${3:detail}'
+  'test template':
+    'prefix': 'test'
+    'body': '''
+      /**
+       * @test
+       * @dataProvider test$1Provider
+       */
+      function test$1($expedted, $testData)
+      {
+          $0
+      }
+      function test$1Provider()
+      {
+          return array(
+              'test1' => array('expedted', 'testData'),
+          );
+      }
+    '''

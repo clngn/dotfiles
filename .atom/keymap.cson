@@ -26,6 +26,10 @@
   'ctrl-v': 'core:page-down'
   'alt-v': 'core:page-up'
   'ctrl-t': 'window:focus-next-pane'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
 
 '.tree-view':
   'alt-h': 'tree-view:recursive-collapse-directory'
