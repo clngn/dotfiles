@@ -1,13 +1,14 @@
 "*":
   "atom-typescript": {}
   core:
+    closeEmptyWindows: false
     disabledPackages: [
       "metrics"
       "exception-reporting"
-      "linter-jshint"
     ]
+    telemetryConsent: "no"
     themes: [
-      "atom-dark-ui"
+      "seti-ui"
       "atom-dark-syntax"
     ]
   editor:
@@ -30,6 +31,11 @@
   "linter-less": {}
   "linter-tslint": {}
   react: {}
+  "seti-syntax": {}
+  "seti-ui":
+    compactView: true
+    fileIcons: false
+    font: "Default Atom Font"
   "tree-view": {}
   welcome:
     showOnStartup: false
