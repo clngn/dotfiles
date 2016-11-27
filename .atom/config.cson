@@ -6,6 +6,9 @@
       "metrics"
       "exception-reporting"
     ]
+    packagesWithKeymapsDisabled: [
+      "highlight-line"
+    ]
     telemetryConsent: "no"
     themes: [
       "seti-ui"
@@ -22,6 +25,7 @@
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
+  "highlight-line": {}
   linter: {}
   "linter-csslint": {}
   "linter-eslint":
@@ -36,6 +40,7 @@
     compactView: true
     fileIcons: false
     font: "Default Atom Font"
+  tabs: {}
   "tree-view": {}
   welcome:
     showOnStartup: false
