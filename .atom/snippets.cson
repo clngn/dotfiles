@@ -94,6 +94,9 @@
   'doc property':
     'prefix': '@prop'
     'body': '@property \{${1:type}\} ${2:name} ${3:detail}'
+  'doc return':
+    'prefix': '@return'
+    'body': '@return \{${1:type}\} ${2:name} ${3:detail}'
   'mocha bdd-describe':
     'prefix': 'describe'
     'body': '''
@@ -105,6 +108,22 @@
     'body': '''
       it('$1', () => {
       });
+    '''
+  'react-addons-perf':
+    'prefix': 'reactperf'
+    'body': '''
+      import Perf from 'react-addons-perf';
+
+      componentWillUpdate() {
+        Perf.start();
+      }
+
+      componentDidUpdate() {
+        Perf.stop();
+        // Perf.printInclusive();
+        // Perf.printExclusive();
+        Perf.printWasted();
+      }
     '''
 
 ## PHP
