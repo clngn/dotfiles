@@ -95,8 +95,8 @@
     'prefix': '@prop'
     'body': '@property \{${1:type}\} ${2:name} ${3:detail}'
   'doc return':
-    'prefix': '@return'
-    'body': '@return \{${1:type}\} ${2:name} ${3:detail}'
+    'prefix': '@ret'
+    'body': '@return \{${1:type}\} ${2:detail}'
   'mocha bdd-describe':
     'prefix': 'describe'
     'body': '''
@@ -125,7 +125,42 @@
         Perf.printWasted();
       }
     '''
+  'react component':
+    'prefix': 'component'
+    'body': '''
+      import React from 'react';
 
+      /**
+       *
+       */
+      export default class ${1:Name} extends React.Component {
+        /**
+         * コンストラクタ
+         *
+         * @param {object} props 初期状態のprops
+         */
+        constructor(props) {
+          super(props);
+
+          this.state = {
+          };
+        }
+
+        /**
+         * props更新時
+         *
+         * @param {object} nextProps 変更後のprops
+         */
+        componentWillReceiveProps(nextProps) {
+        }
+
+        /**
+         * 描画
+         */
+        render() {
+        }
+      }
+    '''
 ## PHP
 '.text.html.php':
   'pre dump':

@@ -21,11 +21,11 @@
       eol: " "
       space: " "
       tab: ">"
-    lineHeight: 1.4
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
   "highlight-line": {}
+  "highlight-selected": {}
   linter: {}
   "linter-csslint": {}
   "linter-eslint":
