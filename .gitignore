@@ -20,3 +20,6 @@
 # Vim
 .vim/.netrwhist
 
+# node
+npm-debug.log
+

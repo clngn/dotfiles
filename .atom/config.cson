@@ -34,6 +34,8 @@
   "linter-jsxhint": {}
   "linter-less": {}
   "linter-tslint": {}
+  "linter-ui-default":
+    tooltipFollows: "Keyboard"
   react: {}
   "seti-syntax": {}
   "seti-ui":

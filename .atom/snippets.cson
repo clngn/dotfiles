@@ -95,7 +95,7 @@
     'prefix': '@prop'
     'body': '@property \{${1:type}\} ${2:name} ${3:detail}'
   'doc return':
-    'prefix': '@ret'
+    'prefix': '@return'
     'body': '@return \{${1:type}\} ${2:detail}'
   'mocha bdd-describe':
     'prefix': 'describe'
@@ -109,6 +109,9 @@
       it('$1', () => {
       });
     '''
+  'todo JSX':
+    'prefix': 'todo'
+    'body': '{/* TODO:$1 */}'
   'react-addons-perf':
     'prefix': 'reactperf'
     'body': '''
@@ -133,11 +136,9 @@
       /**
        *
        */
-      export default class ${1:Name} extends React.Component {
+      export default class ${1:Name} extends React.PureComponent {
         /**
-         * コンストラクタ
-         *
-         * @param {object} props 初期状態のprops
+         * constructor
          */
         constructor(props) {
           super(props);
@@ -147,17 +148,11 @@
         }
 
         /**
-         * props更新時
-         *
-         * @param {object} nextProps 変更後のprops
-         */
-        componentWillReceiveProps(nextProps) {
-        }
-
-        /**
-         * 描画
+         * render
          */
         render() {
+          return(
+          );
         }
       }
     '''
