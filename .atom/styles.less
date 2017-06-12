@@ -13,9 +13,23 @@
 }
 
 .editor {
+  opacity: .5;
 
+  &.is-focused {
+    opacity: 1;
+  }
 }
 
 .editor .cursor {
 
+}
+
+atom-workspace-axis.vertical .pane {
+  &.active {
+    .tab-bar .tab {
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
 }
