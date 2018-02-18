@@ -11,9 +11,11 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "seti-ui"
+      "one-dark-ui"
       "atom-dark-syntax"
     ]
+  "document-outline":
+    showByDefault: false
   editor:
     fontFamily: "Ricty"
     invisibles:
@@ -35,13 +37,10 @@
   "linter-less": {}
   "linter-tslint": {}
   "linter-ui-default":
+    panelHeight: 56
     tooltipFollows: "Keyboard"
+  "one-dark-ui": {}
   react: {}
-  "seti-syntax": {}
-  "seti-ui":
-    compactView: true
-    fileIcons: false
-    font: "Default Atom Font"
   tabs: {}
   "tree-view": {}
   welcome:
