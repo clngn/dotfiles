@@ -51,6 +51,9 @@ export PATH=$HOME/.rbenv/shims:$PATH
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$SCALA_HOME/bin:$PATH
 
+# rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
