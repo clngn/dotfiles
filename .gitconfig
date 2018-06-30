@@ -1,5 +1,6 @@
 [user]
     name = clngn
+    email = clngn.cc@gmail.com
 
 [core]
     editor = vim
