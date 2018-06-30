@@ -32,6 +32,14 @@
   "linter-csslint": {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
   "linter-jshint": {}
   "linter-jsxhint": {}
   "linter-less": {}
