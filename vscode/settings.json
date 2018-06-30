@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Ricty",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-icons",
+    "files.insertFinalNewline": true
+}
