@@ -6,5 +6,6 @@
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "vscode-icons",
     "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true
 }
