@@ -20,3 +20,8 @@ ln -s ~/dotfiles/.atom/init.coffee ~/.atom
 mv snippets.cson snippets.org.cson
 ln -s ~/dotfiles/.atom/snippets.cson ~/.atom
 
+cd ~/Library/Application\ Support/Code/User
+mv keybindings.json keybindings.json.org
+ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User
+mv settings.json settings.json.org
+ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User
