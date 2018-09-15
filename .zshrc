@@ -54,15 +54,12 @@ export PATH=$SCALA_HOME/bin:$PATH
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
 
-# julius
-export PATH=$HOME/work/julius/build/bin:$PATH
-
 # Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+export PATH=$HOME/.anyenv/bin:$PATH
+[ -d $HOME/.anyenv ] && eval "$(anyenv init -)"
 
 case "${OSTYPE}" in
 # Mac
@@ -79,4 +76,3 @@ esac
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
-
