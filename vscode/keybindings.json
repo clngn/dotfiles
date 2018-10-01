@@ -13,5 +13,10 @@
 { "key": "ctrl+shift+e",          "command": "cursorEndSelect",
                                   "when": "textInputFocus" },
 { "key": "ctrl+shift+a",          "command": "cursorHomeSelect",
-                                  "when": "textInputFocus" }
-]
+                                  "when": "textInputFocus"
+                                },
+                                {
+                                  "key": "cmd+n",
+                                  "command": "explorer.newFile"
+                                }
+                              ]
