@@ -8,15 +8,18 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
+    "eslint.autoFixOnSave": true,
     "eslint.validate": [
         "javascript",
         "javascriptreact",
-        {
-            "language": "vue",
-            "autoFix": true
-        }
+        { "language": "typescript", "autoFix": true },
+        { "language": "typescriptreact", "autoFix": true },
+        { "language": "vue", "autoFix": true }
     ],
     "editor.codeActionsOnSave": {
         "source.fixAll.tslint": true
+    },
+    "files.associations": {
+        "*.css": "postcss"
     }
 }
