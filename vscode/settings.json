@@ -22,5 +22,7 @@
     "files.associations": {
         "*.css": "postcss"
     },
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editor.enablePreview": false
 }
