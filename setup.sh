@@ -8,18 +8,6 @@ do
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
-cd ~/.atom
-mv styles.less styles.org.less
-ln -s ~/dotfiles/.atom/styles.less ~/.atom
-mv config.cson config.org.cson
-ln -s ~/dotfiles/.atom/config.cson ~/.atom
-mv keymap.cson keymap.org.cson
-ln -s ~/dotfiles/.atom/keymap.cson ~/.atom
-mv init.coffee init.org.coffee
-ln -s ~/dotfiles/.atom/init.coffee ~/.atom
-mv snippets.cson snippets.org.cson
-ln -s ~/dotfiles/.atom/snippets.cson ~/.atom
-
 cd ~/Library/Application\ Support/Code/User
 if [ -e keybindings.json ]; then mv keybindings.json keybindings.json.org; fi
 ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User
