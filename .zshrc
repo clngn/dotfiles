@@ -80,3 +80,6 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 # enhancd
 [ -f ~/work/enhancd/init.sh ] && source ~/work/enhancd/init.sh
 
+# direnv
+eval "$(direnv hook zsh)"
+
