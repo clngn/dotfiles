@@ -21,7 +21,9 @@ mv snippets.cson snippets.org.cson
 ln -s ~/dotfiles/.atom/snippets.cson ~/.atom
 
 cd ~/Library/Application\ Support/Code/User
-mv keybindings.json keybindings.json.org
+if [ -e keybindings.json ]; then mv keybindings.json keybindings.json.org; fi
 ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User
-mv settings.json settings.json.org
+if [ -e settings.json ]; then mv settings.json settings.json.org; fi
 ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User
+if [ -e snippets ]; then mv snippets snippets.org; fi
+ln -s ~/dotfiles/vscode/snippets ~/Library/Application\ Support/Code/User
