@@ -41,7 +41,7 @@
 	"insert MUI theme spacing": {
 		"prefix": "spacing",
 		"body": [
-			"({ theme }) => theme.spacing($1)"
+			"${props => props.theme.spacing($1)};"
 		]
 	}
 }
