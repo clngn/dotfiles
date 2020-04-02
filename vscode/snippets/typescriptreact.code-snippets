@@ -18,9 +18,9 @@
 	"insert Functional Component Template": {
 		"prefix": "comp",
 		"body": [
-			"import React from \"react\";",
-			"import styled from \"styled-components\";",
-			"import { Box as MuiBox } from \"@material-ui/core\";",
+			"import React from 'react';",
+			"import styled from 'styled-components';",
+			"import { Box as MuiBox } from '@material-ui/core';",
 			"",
 			"type Props = {};",
 			"",
