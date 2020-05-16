@@ -43,5 +43,13 @@
 		"body": [
 			"${(props) => props.theme.spacing($1)};"
 		]
+	},
+	"insert children margin": {
+		"prefix": "not-last-margin",
+		"body": [
+			"& > :not(:last-child) {",
+			"  $1",
+			"}",
+		]
 	}
 }

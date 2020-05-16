@@ -8,14 +8,6 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        { "language": "typescript", "autoFix": true },
-        { "language": "typescriptreact", "autoFix": true },
-        { "language": "vue", "autoFix": true }
-    ],
     "editor.codeActionsOnSave": {
         "source.fixAll.tslint": true,
         "source.fixAll.eslint": true
@@ -25,6 +17,5 @@
     },
     "javascript.validate.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "workbench.editor.enablePreview": false
+    "typescript.updateImportsOnFileMove.enabled": "never"
 }
