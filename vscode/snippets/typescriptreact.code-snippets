@@ -44,10 +44,18 @@
 			"${(props) => props.theme.spacing($1)};"
 		]
 	},
-	"insert children margin": {
-		"prefix": "not-last-margin",
+	"insert children style": {
+		"prefix": "not-last-child",
 		"body": [
 			"& > :not(:last-child) {",
+			"  $1",
+			"}",
+		]
+	},
+	"insert MUI breakpoint xs": {
+		"prefix": "break-xs",
+		"body": [
+			"${(props) => props.theme.breakpoints.down('xs')} {",
 			"  $1",
 			"}",
 		]
