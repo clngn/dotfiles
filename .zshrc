@@ -39,13 +39,13 @@ alias diff='diff -u'
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
-[ -d $PYENV_ROOT ] && eval "$(pyenv init -)"
+#export PYENV_ROOT=$HOME/.pyenv
+#export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+#[ -d $PYENV_ROOT ] && eval "$(pyenv init -)"
 
 # rbenv
-[ -f $HOME/.rbenv/shims ] && eval "$(rbenv init -)"
-export PATH=$HOME/.rbenv/shims:$PATH
+#[ -f $HOME/.rbenv/shims ] && eval "$(rbenv init -)"
+#export PATH=$HOME/.rbenv/shims:$PATH
 
 # scala
 export SCALA_HOME=/usr/local/share/scala
@@ -61,17 +61,6 @@ export PATH=/usr/local/heroku/bin:$PATH
 export PATH=$HOME/.anyenv/bin:$PATH
 [ -d $HOME/.anyenv ] && eval "$(anyenv init -)"
 
-case "${OSTYPE}" in
-# Mac
-darwin*)
-  [ -f $HOME/dotfiles/.zshrc.osx ] && source $HOME/dotfiles/.zshrc.osx
-  ;;
-# Linux
-linux*)
-  [ -f $HOME/dotfiles/.zshrc.linux ] && source $HOME/dotfiles/.zshrc.linux
-  ;;
-esac
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
@@ -82,4 +71,19 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# avr
+export PATH="/usr/local/opt/avr-gcc@7/bin:$PATH"
+
+# OS setting
+case "${OSTYPE}" in
+# Mac
+darwin*)
+  [ -f $HOME/dotfiles/.zshrc.osx ] && source $HOME/dotfiles/.zshrc.osx
+  ;;
+# Linux
+linux*)
+  [ -f $HOME/dotfiles/.zshrc.linux ] && source $HOME/dotfiles/.zshrc.linux
+  ;;
+esac
 
