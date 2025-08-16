@@ -27,3 +27,5 @@
     pm = pull origin master
     fp = fetch --prune
 
+[init]
+    defaultBranch = main
