@@ -35,6 +35,9 @@ alias ll='ls -ahl'
 alias grep='grep --color'
 alias diff='diff -u'
 
+# Claude Code
+export PATH=$HOME/.local/bin:$PATH
+
 # python
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
