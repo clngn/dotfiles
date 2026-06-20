@@ -1,0 +1,15 @@
+theme = TokyoNight Night
+
+font-family = "HackGen"
+font-size = 16
+font-feature = -dlig
+
+window-padding-x = 8
+window-padding-y = 8,0
+window-padding-balance = true
+window-padding-color = extend
+
+cursor-style-blink = true
+
+command = /opt/homebrew/bin/tmux new-session -A -s main
+
