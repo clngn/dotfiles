@@ -1,6 +1,6 @@
 {
     "editor.fontSize": 14,
-    "editor.fontFamily": "Ricty",
+    "editor.fontFamily": "\"Myrica M\"",
     "editor.tabSize": 2,
     "workbench.startupEditor": "newUntitledFile",
     "editor.minimap.enabled": false,
@@ -9,13 +9,22 @@
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.tslint": true,
-        "source.fixAll.eslint": true
+        "source.fixAll.tslint": "explicit",
+        "source.fixAll.eslint": "explicit"
     },
     "files.associations": {
         "*.css": "postcss"
     },
     "javascript.validate.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "typescript.updateImportsOnFileMove.enabled": "never"
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "telemetry.feedback.enabled": false,
+    "accessibility.signals.terminalBell": {
+        "sound": "on"
+    },
+    "terminal.integrated.fontSize": 14,
+    "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "claudeCode.preferredLocation": "panel",
+    "workbench.colorTheme": "Dark Modern"
 }
