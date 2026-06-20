@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO .claudeのalias設定
+
 #DOT_FILES=(.atom .zshrc .vimrc .vim .tmux.conf .pythonrc.py .gitignore .gitconfig .emacs.d)
 DOT_FILES=(.zshrc .vimrc .vim .tmux.conf .gitignore .gitconfig)
 
