@@ -1,12 +1,8 @@
 {
   "cleanupPeriodDays": 180,
-  "model": "opus",
   "permissions": {
     "allow": [
-      "Bash(grep:*)",
-      "Bash(rg:*)",
       "Bash(ls:*)",
-      "Bash(find:*)",
       "Bash(head:*)",
       "Bash(tail:*)",
       "Bash(mkdir:*)",
@@ -30,6 +26,7 @@
       "Bash(rm:*)"
     ]
   },
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
